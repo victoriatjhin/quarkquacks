@@ -29,23 +29,29 @@ Then:
 
 ```bash
 python run_pipeline.py --geese 3       # full pipeline on one scenario, saves a plan plot
-python scripts/generate_data.py        # regenerate training data (about 30 s)
+python scripts/generate_data.py        # training data for 2-3 geese (about 30 s)
+python scripts/generate_data.py --append --sizes 4 --n 150 --seed 4242   # add 4-goose data (about 12 min)
 python -m ml.model                     # train the warm-start model
 python -m ml.warmstart                 # compare random vs. warm-start QAOA
 python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 min)
 python scripts/plot_scaling.py         # draw figures/scaling.png
+python demo/animate.py --geese 3       # collision-free delivery animation, figures/demo.gif
 pytest                                 # run tests
 ```
 
 ## Demo
 
-Goose delivery animation and results charts coming soon.
+![Geese delivering on collision-free routes](figures/demo.gif)
+
+Geese plan routes in first-come-first-served order, never share or swap cells, and wait for or step around people they sense within 2 cells.
+
+![Scaling from 2 to 4 geese](figures/scaling.png)
 
 ## Project structure
 
 | Folder | Contents |
 | --- | --- |
-| `quarkquacks/` | Campus map, QUBO builder, classical solver |
+| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes |
 | `quantum/` | QAOA solver |
 | `ml/` | ML model |
 | `demo/` | Goose animation |

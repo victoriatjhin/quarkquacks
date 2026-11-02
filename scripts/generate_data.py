@@ -30,14 +30,24 @@ def main():
     ap.add_argument("--grid", type=int, default=24)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--out", default="data")
+    ap.add_argument("--append", action="store_true",
+                    help="add to the existing dataset instead of replacing it")
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
     campus = Campus()
     os.makedirs(args.out, exist_ok=True)
     rows, scenarios, t0 = [], [], time.time()
+    csv_path = os.path.join(args.out, "dataset.csv")
+    json_path = os.path.join(args.out, "scenarios.json")
+    if args.append and os.path.exists(json_path):
+        with open(json_path) as f:
+            scenarios = json.load(f)
+        with open(csv_path) as f:
+            rows = list(csv.DictReader(f))
+    first_id = len(scenarios)
 
-    for i in range(args.n):
+    for i in range(first_id, first_id + args.n):
         scn = campus.make_scenario(rng.choice(args.sizes), rng)
         C = normalized_cost_vector(scn["cost"])
         perm, opt_cost = solve_classical(scn["cost"])
@@ -50,12 +60,13 @@ def main():
         rows.append({"id": i, **features(scn), "best_gamma": round(gamma, 4),
                      "best_beta": round(beta, 4), "best_energy": round(e, 5),
                      "p_optimal": round(p_opt, 5), "optimal_cost": opt_cost})
-        if (i + 1) % 25 == 0 or i + 1 == args.n:
-            print(f"{i + 1}/{args.n} scenarios ({time.time() - t0:.0f}s)")
+        done = i + 1 - first_id
+        if done % 25 == 0 or done == args.n:
+            print(f"{done}/{args.n} scenarios ({time.time() - t0:.0f}s)")
 
-    with open(os.path.join(args.out, "scenarios.json"), "w") as f:
+    with open(json_path, "w") as f:
         json.dump(scenarios, f, indent=1)
-    with open(os.path.join(args.out, "dataset.csv"), "w", newline="") as f:
+    with open(csv_path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
