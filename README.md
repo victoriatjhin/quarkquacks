@@ -17,10 +17,6 @@ Campus map + orders → travel costs → QUBO → QAOA (Qiskit) → assignments
 3. **Solve:** run QAOA on the Qiskit Aer simulator, warm-started by the ML model.
 4. **Compare:** check against an exact classical solver.
 
-## Results
-
-*Coming Friday.* We measure how much ML warm-starting reduces QAOA optimizer steps. We don't claim quantum beats classical; at this size the classical solver is exact and instant.
-
 ## Structure
 
 | Folder | Contents |
