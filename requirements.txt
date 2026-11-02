@@ -1,0 +1,10 @@
+qiskit>=2.0
+qiskit-optimization>=0.7
+qiskit-algorithms>=0.4
+qiskit-aer>=0.17
+numpy
+scipy
+pandas
+scikit-learn
+matplotlib
+pytest
