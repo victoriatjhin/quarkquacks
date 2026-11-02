@@ -14,33 +14,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    16.0,
-    42.0
+    8.0,
+    14.0
    ],
    [
-    34.0,
-    69.0
+    17.0,
+    23.0
    ]
   ],
   "id": 0,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 76.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 31.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -58,14 +56,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
@@ -102,23 +98,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    42.0,
+    14.0,
     17.0
    ],
    [
-    87.0,
+    29.0,
     26.0
    ]
   ],
@@ -127,8 +121,8 @@
    0,
    1
   ],
-  "optimal_cost": 68.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 40.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -146,14 +140,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
@@ -194,46 +186,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    60.0,
-    126.0,
-    78.0
+    30.0,
+    42.0,
+    39.0
    ],
    [
-    60.0,
-    126.0,
-    78.0
+    30.0,
+    42.0,
+    39.0
    ],
    [
-    74.0,
-    147.0,
-    92.0
+    37.0,
+    49.0,
+    46.0
    ]
   ],
   "id": 4,
   "optimal_assignment": [
    0,
-   1,
-   2
+   2,
+   1
   ],
-  "optimal_cost": 278.0,
+  "optimal_cost": 118.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -256,46 +245,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    32.0,
-    54.0,
-    93.0
+    16.0,
+    18.0,
+    31.0
    ],
    [
-    58.0,
-    93.0,
-    132.0
+    29.0,
+    31.0,
+    44.0
    ],
    [
-    68.0,
-    108.0,
-    147.0
+    34.0,
+    36.0,
+    49.0
    ]
   ],
   "id": 5,
   "optimal_assignment": [
+   0,
    1,
-   2,
-   0
+   2
   ],
-  "optimal_cost": 254.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -318,37 +304,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    153.0,
-    82.0,
-    123.0
+    51.0,
+    41.0,
+    41.0
    ],
    [
-    81.0,
-    42.0,
-    51.0
+    27.0,
+    21.0,
+    17.0
    ],
    [
-    123.0,
-    62.0,
-    93.0
+    41.0,
+    31.0,
+    31.0
    ]
   ],
   "id": 6,
@@ -357,7 +340,7 @@
    2,
    0
   ],
-  "optimal_cost": 256.0,
+  "optimal_cost": 99.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -376,24 +359,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     21.0,
-    54.0
+    27.0
    ],
    [
     17.0,
-    42.0
+    21.0
    ]
   ],
   "id": 7,
@@ -401,7 +382,7 @@
    0,
    1
   ],
-  "optimal_cost": 63.0,
+  "optimal_cost": 42.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -420,24 +401,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    144.0,
-    153.0
+    48.0,
+    51.0
    ],
    [
-    129.0,
-    138.0
+    43.0,
+    46.0
    ]
   ],
   "id": 8,
@@ -445,7 +424,7 @@
    0,
    1
   ],
-  "optimal_cost": 282.0,
+  "optimal_cost": 94.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -464,32 +443,30 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    84.0,
-    44.0
+    28.0,
+    22.0
    ],
    [
-    99.0,
-    54.0
+    33.0,
+    27.0
    ]
   ],
   "id": 9,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 138.0,
+  "optimal_cost": 55.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -512,46 +489,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    87.0,
-    46.0,
+    29.0,
+    23.0,
     21.0
    ],
    [
-    96.0,
-    52.0,
+    32.0,
+    26.0,
     22.0
    ],
    [
-    90.0,
-    48.0,
+    30.0,
+    24.0,
     24.0
    ]
   ],
   "id": 10,
   "optimal_assignment": [
-   0,
+   1,
    2,
-   1
+   0
   ],
-  "optimal_cost": 157.0,
+  "optimal_cost": 75.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -570,23 +544,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    141.0,
+    47.0,
     32.0
    ],
    [
-    87.0,
+    29.0,
     20.0
    ]
   ],
@@ -595,8 +567,8 @@
    1,
    0
   ],
-  "optimal_cost": 119.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 61.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -614,23 +586,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    50.0,
+    25.0,
     21.0
    ],
    [
-    54.0,
+    27.0,
     17.0
    ]
   ],
@@ -639,7 +609,7 @@
    0,
    1
   ],
-  "optimal_cost": 67.0,
+  "optimal_cost": 42.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -658,24 +628,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    81.0,
-    129.0
+    27.0,
+    43.0
    ],
    [
-    93.0,
-    141.0
+    31.0,
+    47.0
    ]
   ],
   "id": 13,
@@ -683,7 +651,7 @@
    0,
    1
   ],
-  "optimal_cost": 222.0,
+  "optimal_cost": 74.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -706,36 +674,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
     24.0,
-    22.0,
+    11.0,
     20.0
    ],
    [
     31.0,
-    48.0,
+    24.0,
     27.0
    ],
    [
     29.0,
-    44.0,
+    22.0,
     25.0
    ]
   ],
@@ -745,7 +710,7 @@
    2,
    0
   ],
-  "optimal_cost": 78.0,
+  "optimal_cost": 67.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -768,37 +733,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    34.0,
-    34.0,
-    108.0
+    17.0,
+    17.0,
+    36.0
    ],
    [
-    44.0,
-    44.0,
-    123.0
+    22.0,
+    22.0,
+    41.0
    ],
    [
-    30.0,
-    30.0,
-    102.0
+    15.0,
+    15.0,
+    34.0
    ]
   ],
   "id": 15,
@@ -807,9 +769,9 @@
    1,
    2
   ],
-  "optimal_cost": 180.0,
+  "optimal_cost": 73.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -830,48 +792,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
     25.0,
-    32.0,
-    93.0
+    16.0,
+    31.0
    ],
    [
     32.0,
-    58.0,
-    132.0
+    29.0,
+    44.0
    ],
    [
     23.0,
-    40.0,
-    105.0
+    20.0,
+    35.0
    ]
   ],
   "id": 16,
   "optimal_assignment": [
-   2,
+   1,
    0,
-   1
+   2
   ],
-  "optimal_cost": 165.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -892,35 +851,32 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    87.0,
+    29.0,
     23.0,
     26.0
    ],
    [
-    63.0,
+    21.0,
     21.0,
     24.0
    ],
    [
-    51.0,
+    17.0,
     11.0,
     14.0
    ]
@@ -928,12 +884,12 @@
   "id": 17,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 98.0,
+  "optimal_cost": 58.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -950,14 +906,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
@@ -994,33 +948,31 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    120.0,
+    40.0,
     31.0
    ],
    [
-    150.0,
+    50.0,
     41.0
    ]
   ],
   "id": 19,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 161.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 81.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -1042,36 +994,33 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    105.0,
-    135.0,
+    35.0,
+    45.0,
     36.0
    ],
    [
-    63.0,
-    93.0,
+    21.0,
+    31.0,
     24.0
    ],
    [
-    90.0,
-    120.0,
+    30.0,
+    40.0,
     31.0
    ]
   ],
@@ -1081,7 +1030,7 @@
    0,
    1
   ],
-  "optimal_cost": 219.0,
+  "optimal_cost": 97.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -1100,32 +1049,30 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    102.0,
-    56.0
+    34.0,
+    28.0
    ],
    [
-    120.0,
-    68.0
+    40.0,
+    34.0
    ]
   ],
   "id": 21,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 170.0,
+  "optimal_cost": 68.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1144,23 +1091,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
    [
-    72.0,
+    24.0,
     16.0
    ],
    [
-    84.0,
+    28.0,
     16.0
    ]
   ],
@@ -1169,8 +1114,8 @@
    0,
    1
   ],
-  "optimal_cost": 88.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 40.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -1192,46 +1137,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    70.0,
-    96.0,
-    102.0
+    35.0,
+    32.0,
+    34.0
    ],
    [
-    50.0,
-    60.0,
-    66.0
+    25.0,
+    20.0,
+    22.0
    ],
    [
-    84.0,
-    117.0,
-    123.0
+    42.0,
+    39.0,
+    41.0
    ]
   ],
   "id": 23,
   "optimal_assignment": [
-   2,
    1,
+   2,
    0
   ],
-  "optimal_cost": 246.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -1250,23 +1192,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    58.0,
+    29.0,
     22.0
    ],
    [
-    50.0,
+    25.0,
     24.0
    ]
   ],
@@ -1275,7 +1215,7 @@
    1,
    0
   ],
-  "optimal_cost": 72.0,
+  "optimal_cost": 47.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1294,24 +1234,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     20.0,
-    58.0
+    29.0
    ],
    [
     17.0,
-    52.0
+    26.0
    ]
   ],
   "id": 25,
@@ -1319,7 +1257,7 @@
    0,
    1
   ],
-  "optimal_cost": 72.0,
+  "optimal_cost": 46.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1342,20 +1280,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
@@ -1404,46 +1339,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    56.0,
-    52.0,
-    75.0
+    28.0,
+    26.0,
+    25.0
    ],
    [
-    50.0,
-    46.0,
-    66.0
+    25.0,
+    23.0,
+    22.0
    ],
    [
-    44.0,
-    40.0,
-    57.0
+    22.0,
+    20.0,
+    19.0
    ]
   ],
   "id": 27,
   "optimal_assignment": [
+   2,
    1,
-   0,
-   2
+   0
   ],
-  "optimal_cost": 159.0,
+  "optimal_cost": 70.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -1462,33 +1394,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
     22.0,
-    72.0
+    24.0
    ],
    [
     18.0,
-    66.0
+    22.0
    ]
   ],
   "id": 28,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 88.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 42.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -1506,24 +1436,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     24.0,
-    33.0
+    11.0
    ],
    [
     30.0,
-    87.0
+    29.0
    ]
   ],
   "id": 29,
@@ -1531,8 +1459,8 @@
    1,
    0
   ],
-  "optimal_cost": 63.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 41.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -1550,23 +1478,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    54.0,
+    27.0,
     22.0
    ],
    [
-    32.0,
+    16.0,
     13.0
    ]
   ],
@@ -1575,8 +1501,8 @@
    1,
    0
   ],
-  "optimal_cost": 54.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 38.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -1598,20 +1524,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
@@ -1656,24 +1579,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    38.0,
-    96.0
+    19.0,
+    32.0
    ],
    [
-    34.0,
-    90.0
+    17.0,
+    30.0
    ]
   ],
   "id": 32,
@@ -1681,7 +1602,7 @@
    0,
    1
   ],
-  "optimal_cost": 128.0,
+  "optimal_cost": 49.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1704,48 +1625,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    48.0,
-    90.0,
+    24.0,
+    30.0,
     24.0
    ],
    [
-    66.0,
-    117.0,
+    33.0,
+    39.0,
     27.0
    ],
    [
-    62.0,
-    111.0,
+    31.0,
+    37.0,
     25.0
    ]
   ],
   "id": 33,
   "optimal_assignment": [
-   1,
+   0,
    2,
-   0
+   1
   ],
-  "optimal_cost": 179.0,
+  "optimal_cost": 88.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -1762,32 +1680,30 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     35.0,
-    93.0
+    31.0
    ],
    [
     27.0,
-    69.0
+    23.0
    ]
   ],
   "id": 34,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 104.0,
+  "optimal_cost": 58.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1806,24 +1722,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    46.0,
-    46.0
+    23.0,
+    23.0
    ],
    [
-    30.0,
-    30.0
+    15.0,
+    15.0
    ]
   ],
   "id": 35,
@@ -1831,7 +1745,7 @@
    0,
    1
   ],
-  "optimal_cost": 76.0,
+  "optimal_cost": 38.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -1854,37 +1768,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    63.0,
+    21.0,
     19.0,
-    93.0
+    31.0
    ],
    [
-    105.0,
+    35.0,
     27.0,
-    135.0
+    45.0
    ],
    [
-    78.0,
+    26.0,
     24.0,
-    108.0
+    36.0
    ]
   ],
   "id": 36,
@@ -1893,9 +1804,9 @@
    1,
    2
   ],
-  "optimal_cost": 198.0,
+  "optimal_cost": 84.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -1912,24 +1823,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    105.0,
-    64.0
+    35.0,
+    32.0
    ],
    [
-    87.0,
-    52.0
+    29.0,
+    26.0
    ]
   ],
   "id": 37,
@@ -1937,8 +1846,8 @@
    1,
    0
   ],
-  "optimal_cost": 151.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 61.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -1960,46 +1869,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    84.0,
-    58.0,
-    76.0
+    28.0,
+    29.0,
+    38.0
    ],
    [
-    72.0,
-    50.0,
-    68.0
+    24.0,
+    25.0,
+    34.0
    ],
    [
-    69.0,
-    48.0,
-    66.0
+    23.0,
+    24.0,
+    33.0
    ]
   ],
   "id": 38,
   "optimal_assignment": [
+   0,
    1,
-   2,
-   0
+   2
   ],
-  "optimal_cost": 195.0,
+  "optimal_cost": 86.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -2022,48 +1928,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
     18.0,
     22.0,
-    22.0
+    11.0
    ],
    [
     23.0,
     27.0,
-    40.0
+    20.0
    ],
    [
     31.0,
     35.0,
-    56.0
+    28.0
    ]
   ],
   "id": 39,
   "optimal_assignment": [
    2,
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 80.0,
+  "optimal_cost": 69.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -2080,23 +1983,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    81.0,
+    27.0,
     17.0
    ],
    [
-    111.0,
+    37.0,
     25.0
    ]
   ],
@@ -2105,8 +2006,8 @@
    0,
    1
   ],
-  "optimal_cost": 106.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 52.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2124,23 +2025,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    87.0,
+    29.0,
     25.0
    ],
    [
-    111.0,
+    37.0,
     27.0
    ]
   ],
@@ -2149,8 +2048,8 @@
    0,
    1
   ],
-  "optimal_cost": 114.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2168,33 +2067,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     26.0,
-    114.0
+    38.0
    ],
    [
     28.0,
-    120.0
+    40.0
    ]
   ],
   "id": 42,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 142.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 66.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2212,24 +2109,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    87.0,
-    105.0
+    29.0,
+    35.0
    ],
    [
-    81.0,
-    99.0
+    27.0,
+    33.0
    ]
   ],
   "id": 43,
@@ -2237,7 +2132,7 @@
    0,
    1
   ],
-  "optimal_cost": 186.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -2256,24 +2151,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    132.0,
-    114.0
+    44.0,
+    38.0
    ],
    [
-    138.0,
-    120.0
+    46.0,
+    40.0
    ]
   ],
   "id": 44,
@@ -2281,7 +2174,7 @@
    1,
    0
   ],
-  "optimal_cost": 252.0,
+  "optimal_cost": 84.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -2304,46 +2197,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
     31.0,
-    48.0,
-    54.0
+    24.0,
+    27.0
    ],
    [
     25.0,
-    24.0,
-    30.0
+    12.0,
+    15.0
    ],
    [
     28.0,
-    42.0,
-    48.0
+    21.0,
+    24.0
    ]
   ],
   "id": 45,
   "optimal_assignment": [
-   0,
    1,
-   2
+   2,
+   0
   ],
-  "optimal_cost": 103.0,
+  "optimal_cost": 67.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -2362,24 +2252,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    44.0,
-    52.0
+    22.0,
+    26.0
    ],
    [
-    36.0,
-    44.0
+    18.0,
+    22.0
    ]
   ],
   "id": 46,
@@ -2387,7 +2275,7 @@
    0,
    1
   ],
-  "optimal_cost": 88.0,
+  "optimal_cost": 44.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -2406,24 +2294,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
     25.0,
-    117.0
+    39.0
    ],
    [
     23.0,
-    93.0
+    31.0
    ]
   ],
   "id": 47,
@@ -2431,8 +2317,8 @@
    0,
    1
   ],
-  "optimal_cost": 118.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2450,24 +2336,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    111.0,
-    63.0
+    37.0,
+    21.0
    ],
    [
-    90.0,
-    42.0
+    30.0,
+    14.0
    ]
   ],
   "id": 48,
@@ -2475,7 +2359,7 @@
    1,
    0
   ],
-  "optimal_cost": 153.0,
+  "optimal_cost": 51.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -2498,36 +2382,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
     22.0,
-    40.0,
+    20.0,
     18.0
    ],
    [
     21.0,
-    38.0,
+    19.0,
     17.0
    ],
    [
     29.0,
-    62.0,
+    31.0,
     25.0
    ]
   ],
@@ -2537,9 +2418,9 @@
    1,
    0
   ],
-  "optimal_cost": 85.0,
+  "optimal_cost": 66.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -2556,14 +2437,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
@@ -2600,23 +2479,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    81.0,
+    27.0,
     18.0
    ],
    [
-    135.0,
+    45.0,
     26.0
    ]
   ],
@@ -2625,8 +2502,8 @@
    0,
    1
   ],
-  "optimal_cost": 107.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 53.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2648,36 +2525,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
     25.0,
-    90.0,
+    30.0,
     25.0
    ],
    [
     42.0,
-    153.0,
+    51.0,
     42.0
    ],
    [
     31.0,
-    120.0,
+    40.0,
     31.0
    ]
   ],
@@ -2687,9 +2561,9 @@
    2,
    0
   ],
-  "optimal_cost": 163.0,
+  "optimal_cost": 103.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -2710,37 +2584,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    60.0,
+    20.0,
     22.0,
-    40.0
+    20.0
    ],
    [
-    99.0,
+    33.0,
     25.0,
-    54.0
+    27.0
    ],
    [
-    102.0,
+    34.0,
     24.0,
-    56.0
+    28.0
    ]
   ],
   "id": 53,
@@ -2749,9 +2620,9 @@
    2,
    1
   ],
-  "optimal_cost": 138.0,
+  "optimal_cost": 71.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -2768,24 +2639,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    81.0,
-    28.0
+    27.0,
+    14.0
    ],
    [
-    108.0,
-    34.0
+    36.0,
+    17.0
    ]
   ],
   "id": 54,
@@ -2793,8 +2662,8 @@
    0,
    1
   ],
-  "optimal_cost": 115.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 44.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2816,48 +2685,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
     19.0,
-    93.0,
+    31.0,
     18.0
    ],
    [
     30.0,
-    126.0,
+    42.0,
     29.0
    ],
    [
     21.0,
-    99.0,
+    33.0,
     20.0
    ]
   ],
   "id": 55,
   "optimal_assignment": [
-   1,
+   2,
    0,
-   2
+   1
   ],
-  "optimal_cost": 143.0,
+  "optimal_cost": 81.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -2874,24 +2740,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     31.0,
-    111.0
+    37.0
    ],
    [
     18.0,
-    66.0
+    22.0
    ]
   ],
   "id": 56,
@@ -2899,8 +2763,8 @@
    0,
    1
   ],
-  "optimal_cost": 97.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 53.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -2918,24 +2782,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    34.0,
-    20.0
+    17.0,
+    10.0
    ],
    [
-    54.0,
-    40.0
+    27.0,
+    20.0
    ]
   ],
   "id": 57,
@@ -2943,7 +2805,7 @@
    1,
    0
   ],
-  "optimal_cost": 74.0,
+  "optimal_cost": 37.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -2962,24 +2824,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    56.0,
-    56.0
+    28.0,
+    28.0
    ],
    [
-    68.0,
-    68.0
+    34.0,
+    34.0
    ]
   ],
   "id": 58,
@@ -2987,7 +2847,7 @@
    0,
    1
   ],
-  "optimal_cost": 124.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -3006,24 +2866,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    87.0,
-    96.0
+    29.0,
+    32.0
    ],
    [
-    90.0,
-    99.0
+    30.0,
+    33.0
    ]
   ],
   "id": 59,
@@ -3031,7 +2889,7 @@
    0,
    1
   ],
-  "optimal_cost": 186.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -3050,23 +2908,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    30.0,
+    15.0,
     19.0
    ],
    [
-    40.0,
+    20.0,
     30.0
    ]
   ],
@@ -3075,7 +2931,7 @@
    1,
    0
   ],
-  "optimal_cost": 59.0,
+  "optimal_cost": 39.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -3094,24 +2950,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     18.0,
-    36.0
+    18.0
    ],
    [
     15.0,
-    34.0
+    17.0
    ]
   ],
   "id": 61,
@@ -3119,8 +2973,8 @@
    1,
    0
   ],
-  "optimal_cost": 51.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 33.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -3142,37 +2996,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    78.0,
-    46.0,
-    108.0
+    39.0,
+    23.0,
+    36.0
    ],
    [
-    76.0,
-    44.0,
-    105.0
+    38.0,
+    22.0,
+    35.0
    ],
    [
-    84.0,
-    52.0,
-    117.0
+    42.0,
+    26.0,
+    39.0
    ]
   ],
   "id": 62,
@@ -3181,7 +3032,7 @@
    2,
    0
   ],
-  "optimal_cost": 235.0,
+  "optimal_cost": 100.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3200,24 +3051,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    48.0,
-    66.0
+    24.0,
+    33.0
    ],
    [
-    42.0,
-    60.0
+    21.0,
+    30.0
    ]
   ],
   "id": 63,
@@ -3225,7 +3074,7 @@
    0,
    1
   ],
-  "optimal_cost": 108.0,
+  "optimal_cost": 54.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -3248,46 +3097,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    54.0,
-    126.0,
-    105.0
+    27.0,
+    42.0,
+    35.0
    ],
    [
-    72.0,
-    153.0,
-    132.0
+    36.0,
+    51.0,
+    44.0
    ],
    [
-    44.0,
-    111.0,
-    90.0
+    22.0,
+    37.0,
+    30.0
    ]
   ],
   "id": 64,
   "optimal_assignment": [
-   2,
    0,
+   2,
    1
   ],
-  "optimal_cost": 288.0,
+  "optimal_cost": 108.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3310,46 +3156,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    50.0,
+    25.0,
     23.0,
-    36.0
+    18.0
    ],
    [
-    82.0,
-    35.0,
-    68.0
-   ],
-   [
-    94.0,
     41.0,
-    80.0
+    35.0,
+    34.0
+   ],
+   [
+    47.0,
+    41.0,
+    40.0
    ]
   ],
   "id": 65,
   "optimal_assignment": [
    2,
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 159.0,
+  "optimal_cost": 100.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3368,32 +3211,30 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     15.0,
-    44.0
+    22.0
    ],
    [
     22.0,
-    54.0
+    27.0
    ]
   ],
   "id": 66,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 66.0,
+  "optimal_cost": 42.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -3416,20 +3257,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
@@ -3474,32 +3312,30 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    93.0,
-    42.0
+    31.0,
+    21.0
    ],
    [
-    120.0,
-    60.0
+    40.0,
+    30.0
    ]
   ],
   "id": 68,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 153.0,
+  "optimal_cost": 61.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -3522,20 +3358,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
@@ -3584,36 +3417,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
     17.0,
-    78.0,
+    26.0,
     20.0
    ],
    [
     28.0,
-    111.0,
+    37.0,
     31.0
    ],
    [
     14.0,
-    63.0,
+    21.0,
     17.0
    ]
   ],
@@ -3623,9 +3453,9 @@
    2,
    1
   ],
-  "optimal_cost": 111.0,
+  "optimal_cost": 69.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -3642,23 +3472,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
    [
-    40.0,
+    20.0,
     24.0
    ],
    [
-    46.0,
+    23.0,
     21.0
    ]
   ],
@@ -3667,8 +3495,8 @@
    0,
    1
   ],
-  "optimal_cost": 61.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 41.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -3690,46 +3518,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
     18.0,
     25.0,
-    28.0
+    14.0
    ],
    [
     24.0,
     31.0,
-    48.0
+    24.0
    ],
    [
     24.0,
     31.0,
-    48.0
+    24.0
    ]
   ],
   "id": 72,
   "optimal_assignment": [
    2,
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 83.0,
+  "optimal_cost": 69.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3752,46 +3577,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    66.0,
-    117.0,
-    126.0
+    33.0,
+    39.0,
+    42.0
    ],
    [
-    70.0,
-    123.0,
-    132.0
+    35.0,
+    41.0,
+    44.0
    ],
    [
-    54.0,
-    99.0,
-    108.0
+    27.0,
+    33.0,
+    36.0
    ]
   ],
   "id": 73,
   "optimal_assignment": [
-   1,
    0,
+   1,
    2
   ],
-  "optimal_cost": 295.0,
+  "optimal_cost": 110.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3814,46 +3636,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    126.0,
-    46.0,
-    87.0
+    42.0,
+    23.0,
+    29.0
    ],
    [
-    135.0,
-    52.0,
-    96.0
+    45.0,
+    26.0,
+    32.0
    ],
    [
-    135.0,
-    52.0,
-    96.0
+    45.0,
+    26.0,
+    32.0
    ]
   ],
   "id": 74,
   "optimal_assignment": [
-   2,
    1,
+   2,
    0
   ],
-  "optimal_cost": 274.0,
+  "optimal_cost": 100.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -3872,32 +3691,30 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    38.0,
-    57.0
+    19.0,
+    19.0
    ],
    [
-    70.0,
-    105.0
+    35.0,
+    35.0
    ]
   ],
   "id": 75,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 127.0,
+  "optimal_cost": 54.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -3920,37 +3737,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    108.0,
+    36.0,
     26.0,
-    40.0
+    20.0
    ],
    [
-    102.0,
+    34.0,
     24.0,
-    36.0
+    18.0
    ],
    [
-    120.0,
+    40.0,
     24.0,
-    48.0
+    24.0
    ]
   ],
   "id": 76,
@@ -3959,9 +3773,9 @@
    0,
    1
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 78.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -3978,24 +3792,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     17.0,
-    51.0
+    17.0
    ],
    [
     23.0,
-    75.0
+    25.0
    ]
   ],
   "id": 77,
@@ -4003,8 +3815,8 @@
    1,
    0
   ],
-  "optimal_cost": 74.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 40.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -4022,32 +3834,30 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     15.0,
-    38.0
+    19.0
    ],
    [
     24.0,
-    56.0
+    28.0
    ]
   ],
   "id": 78,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 62.0,
+  "optimal_cost": 43.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -4066,24 +3876,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    93.0,
-    93.0
+    31.0,
+    31.0
    ],
    [
-    117.0,
-    117.0
+    39.0,
+    39.0
    ]
   ],
   "id": 79,
@@ -4091,7 +3899,7 @@
    0,
    1
   ],
-  "optimal_cost": 210.0,
+  "optimal_cost": 70.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -4114,37 +3922,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    70.0,
+    35.0,
     29.0,
-    70.0
+    35.0
    ],
    [
-    48.0,
     24.0,
-    48.0
+    24.0,
+    24.0
    ],
    [
-    54.0,
     27.0,
-    54.0
+    27.0,
+    27.0
    ]
   ],
   "id": 80,
@@ -4153,7 +3958,7 @@
    0,
    2
   ],
-  "optimal_cost": 131.0,
+  "optimal_cost": 80.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4176,46 +3981,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    42.0,
-    36.0,
+    21.0,
+    18.0,
     34.0
    ],
    [
-    26.0,
-    20.0,
+    13.0,
+    10.0,
     24.0
    ],
    [
-    38.0,
-    32.0,
+    19.0,
+    16.0,
     32.0
    ]
   ],
   "id": 81,
   "optimal_assignment": [
-   2,
    1,
+   2,
    0
   ],
-  "optimal_cost": 92.0,
+  "optimal_cost": 61.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4238,37 +4040,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    44.0,
+    22.0,
     31.0,
-    111.0
+    37.0
    ],
    [
-    64.0,
+    32.0,
     35.0,
-    141.0
+    47.0
    ],
    [
-    34.0,
+    17.0,
     26.0,
-    96.0
+    32.0
    ]
   ],
   "id": 82,
@@ -4277,9 +4076,9 @@
    1,
    2
   ],
-  "optimal_cost": 175.0,
+  "optimal_cost": 89.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -4300,46 +4099,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    90.0,
-    90.0,
-    74.0
+    30.0,
+    30.0,
+    37.0
    ],
    [
-    72.0,
-    72.0,
-    62.0
+    24.0,
+    24.0,
+    31.0
    ],
    [
-    75.0,
-    75.0,
-    64.0
+    25.0,
+    25.0,
+    32.0
    ]
   ],
   "id": 83,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 221.0,
+  "optimal_cost": 86.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4358,32 +4154,30 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    114.0,
-    90.0
+    38.0,
+    45.0
    ],
    [
-    93.0,
-    76.0
+    31.0,
+    38.0
    ]
   ],
   "id": 84,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 183.0,
+  "optimal_cost": 76.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -4406,48 +4200,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    44.0,
+    22.0,
     26.0,
-    102.0
+    34.0
    ],
    [
-    56.0,
-    32.0,
-    120.0
-   ],
-   [
-    48.0,
     28.0,
-    108.0
+    32.0,
+    40.0
+   ],
+   [
+    24.0,
+    28.0,
+    36.0
    ]
   ],
   "id": 85,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 182.0,
+  "optimal_cost": 90.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -4468,46 +4259,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    68.0,
-    42.0,
+    34.0,
+    21.0,
     25.0
    ],
    [
-    54.0,
-    28.0,
+    27.0,
+    14.0,
     24.0
    ],
    [
-    82.0,
-    56.0,
+    41.0,
+    28.0,
     32.0
    ]
   ],
   "id": 86,
   "optimal_assignment": [
-   0,
+   2,
    1,
-   2
+   0
   ],
-  "optimal_cost": 128.0,
+  "optimal_cost": 80.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4526,24 +4314,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    44.0,
-    52.0
+    22.0,
+    26.0
    ],
    [
-    52.0,
-    60.0
+    26.0,
+    30.0
    ]
   ],
   "id": 87,
@@ -4551,7 +4337,7 @@
    0,
    1
   ],
-  "optimal_cost": 104.0,
+  "optimal_cost": 52.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -4574,46 +4360,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    52.0,
-    54.0,
-    72.0
+    26.0,
+    18.0,
+    24.0
    ],
    [
-    64.0,
-    84.0,
-    102.0
+    32.0,
+    28.0,
+    34.0
    ],
    [
-    66.0,
-    87.0,
-    105.0
+    33.0,
+    29.0,
+    35.0
    ]
   ],
   "id": 88,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 222.0,
+  "optimal_cost": 85.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4632,14 +4415,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
@@ -4676,24 +4457,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    72.0,
-    84.0
+    24.0,
+    28.0
    ],
    [
-    87.0,
-    99.0
+    29.0,
+    33.0
    ]
   ],
   "id": 90,
@@ -4701,7 +4480,7 @@
    0,
    1
   ],
-  "optimal_cost": 171.0,
+  "optimal_cost": 57.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -4724,37 +4503,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    60.0,
-    34.0,
-    34.0
+    30.0,
+    17.0,
+    17.0
    ],
    [
-    82.0,
-    56.0,
-    56.0
+    41.0,
+    28.0,
+    28.0
    ],
    [
-    76.0,
-    50.0,
-    50.0
+    38.0,
+    25.0,
+    25.0
    ]
   ],
   "id": 91,
@@ -4763,7 +4539,7 @@
    2,
    0
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -4786,48 +4562,45 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    141.0,
+    47.0,
     29.0,
-    56.0
+    28.0
    ],
    [
-    123.0,
+    41.0,
     23.0,
-    44.0
+    22.0
    ],
    [
-    108.0,
+    36.0,
     18.0,
-    34.0
+    17.0
    ]
   ],
   "id": 92,
   "optimal_assignment": [
-   1,
    2,
+   1,
    0
   ],
-  "optimal_cost": 181.0,
+  "optimal_cost": 87.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -4844,24 +4617,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     23.0,
-    72.0
+    24.0
    ],
    [
     28.0,
-    99.0
+    33.0
    ]
   ],
   "id": 93,
@@ -4869,8 +4640,8 @@
    1,
    0
   ],
-  "optimal_cost": 100.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 52.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -4888,24 +4659,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     29.0,
-    105.0
+    35.0
    ],
    [
     15.0,
-    39.0
+    13.0
    ]
   ],
   "id": 94,
@@ -4913,8 +4682,8 @@
    0,
    1
   ],
-  "optimal_cost": 68.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 42.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -4936,48 +4705,45 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    84.0,
+    28.0,
     29.0,
-    38.0
+    19.0
    ],
    [
-    105.0,
+    35.0,
     36.0,
-    52.0
+    26.0
    ],
    [
-    87.0,
+    29.0,
     30.0,
-    40.0
+    20.0
    ]
   ],
   "id": 95,
   "optimal_assignment": [
+   2,
    0,
-   1,
-   2
+   1
   ],
-  "optimal_cost": 160.0,
+  "optimal_cost": 84.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -4994,24 +4760,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    120.0,
-    99.0
+    40.0,
+    33.0
    ],
    [
-    144.0,
-    123.0
+    48.0,
+    41.0
    ]
   ],
   "id": 96,
@@ -5019,7 +4783,7 @@
    1,
    0
   ],
-  "optimal_cost": 243.0,
+  "optimal_cost": 81.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -5038,33 +4802,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
     30.0,
-    52.0
+    26.0
    ],
    [
     27.0,
-    46.0
+    23.0
    ]
   ],
   "id": 97,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 76.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 53.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -5082,33 +4844,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     30.0,
-    108.0
+    36.0
    ],
    [
     37.0,
-    129.0
+    43.0
    ]
   ],
   "id": 98,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 145.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 73.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -5130,46 +4890,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    135.0,
-    156.0,
+    45.0,
+    52.0,
     33.0
    ],
    [
-    108.0,
-    129.0,
+    36.0,
+    43.0,
     24.0
    ],
    [
-    138.0,
-    159.0,
+    46.0,
+    53.0,
     34.0
    ]
   ],
   "id": 99,
   "optimal_assignment": [
-   1,
+   2,
    0,
-   2
+   1
   ],
-  "optimal_cost": 298.0,
+  "optimal_cost": 122.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5192,37 +4949,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    62.0,
-    54.0,
-    99.0
+    31.0,
+    27.0,
+    33.0
    ],
    [
-    44.0,
-    36.0,
-    72.0
+    22.0,
+    18.0,
+    24.0
    ],
    [
-    44.0,
-    36.0,
-    72.0
+    22.0,
+    18.0,
+    24.0
    ]
   ],
   "id": 100,
@@ -5231,7 +4985,7 @@
    0,
    2
   ],
-  "optimal_cost": 170.0,
+  "optimal_cost": 73.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5254,46 +5008,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    54.0,
-    69.0,
-    99.0
+    27.0,
+    23.0,
+    33.0
    ],
    [
-    62.0,
-    81.0,
-    111.0
+    31.0,
+    27.0,
+    37.0
    ],
    [
-    82.0,
-    111.0,
-    141.0
+    41.0,
+    37.0,
+    47.0
    ]
   ],
   "id": 101,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 262.0,
+  "optimal_cost": 101.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5316,46 +5067,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
     26.0,
-    40.0,
+    20.0,
     26.0
    ],
    [
     25.0,
-    50.0,
+    25.0,
     25.0
    ],
    [
     25.0,
-    50.0,
+    25.0,
     25.0
    ]
   ],
   "id": 102,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 90.0,
+  "optimal_cost": 70.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5378,46 +5126,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    141.0,
-    50.0,
-    68.0
+    47.0,
+    25.0,
+    34.0
    ],
    [
-    123.0,
-    38.0,
-    56.0
+    41.0,
+    19.0,
+    28.0
    ],
    [
-    144.0,
-    52.0,
-    70.0
+    48.0,
+    26.0,
+    35.0
    ]
   ],
   "id": 103,
   "optimal_assignment": [
    1,
-   0,
-   2
+   2,
+   0
   ],
-  "optimal_cost": 243.0,
+  "optimal_cost": 101.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5440,37 +5185,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    26.0,
-    26.0,
-    58.0
+    13.0,
+    13.0,
+    29.0
+   ],
+   [
+    8.0,
+    8.0,
+    24.0
    ],
    [
     16.0,
     16.0,
-    48.0
-   ],
-   [
-    32.0,
-    32.0,
-    64.0
+    32.0
    ]
   ],
   "id": 104,
@@ -5479,7 +5221,7 @@
    1,
    2
   ],
-  "optimal_cost": 106.0,
+  "optimal_cost": 53.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5502,20 +5244,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
@@ -5560,33 +5299,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    56.0,
+    28.0,
     25.0
    ],
    [
-    68.0,
+    34.0,
     31.0
    ]
   ],
   "id": 106,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 87.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 59.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -5608,46 +5345,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    44.0,
-    111.0,
-    72.0
+    22.0,
+    37.0,
+    24.0
    ],
    [
-    74.0,
-    156.0,
-    117.0
-   ],
-   [
+    37.0,
     52.0,
-    123.0,
-    84.0
+    39.0
+   ],
+   [
+    26.0,
+    41.0,
+    28.0
    ]
   ],
   "id": 107,
   "optimal_assignment": [
-   2,
    0,
+   2,
    1
   ],
-  "optimal_cost": 269.0,
+  "optimal_cost": 102.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5666,33 +5400,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     30.0,
-    58.0
+    29.0
    ],
    [
     30.0,
-    58.0
+    29.0
    ]
   ],
   "id": 108,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 88.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 59.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -5714,37 +5446,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    72.0,
+    36.0,
     23.0,
-    72.0
+    36.0
    ],
    [
-    64.0,
+    32.0,
     25.0,
-    64.0
+    32.0
    ],
    [
-    68.0,
+    34.0,
     21.0,
-    68.0
+    34.0
    ]
   ],
   "id": 109,
@@ -5753,7 +5482,7 @@
    0,
    2
   ],
-  "optimal_cost": 155.0,
+  "optimal_cost": 89.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5776,46 +5505,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    138.0,
-    129.0,
+    46.0,
+    43.0,
     31.0
    ],
    [
-    147.0,
-    138.0,
+    49.0,
+    46.0,
     34.0
    ],
    [
-    159.0,
-    150.0,
+    53.0,
+    50.0,
     38.0
    ]
   ],
   "id": 110,
   "optimal_assignment": [
+   2,
    1,
-   0,
-   2
+   0
   ],
-  "optimal_cost": 314.0,
+  "optimal_cost": 130.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5834,24 +5560,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
     26.0,
-    72.0
+    36.0
    ],
    [
     25.0,
-    70.0
+    35.0
    ]
   ],
   "id": 111,
@@ -5859,7 +5583,7 @@
    0,
    1
   ],
-  "optimal_cost": 96.0,
+  "optimal_cost": 61.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -5882,37 +5606,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    48.0,
-    48.0,
-    62.0
+    24.0,
+    24.0,
+    31.0
    ],
    [
-    56.0,
-    56.0,
-    70.0
+    28.0,
+    28.0,
+    35.0
    ],
    [
-    46.0,
-    46.0,
-    60.0
+    23.0,
+    23.0,
+    30.0
    ]
   ],
   "id": 112,
@@ -5921,7 +5642,7 @@
    1,
    2
   ],
-  "optimal_cost": 164.0,
+  "optimal_cost": 82.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -5940,24 +5661,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    75.0,
-    46.0
+    25.0,
+    23.0
    ],
    [
-    75.0,
-    46.0
+    25.0,
+    23.0
    ]
   ],
   "id": 113,
@@ -5965,8 +5684,8 @@
    1,
    0
   ],
-  "optimal_cost": 121.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 48.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -5984,32 +5703,30 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    42.0,
-    87.0
+    21.0,
+    29.0
    ],
    [
-    48.0,
-    96.0
+    24.0,
+    32.0
    ]
   ],
   "id": 114,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 135.0,
+  "optimal_cost": 53.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -6032,48 +5749,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    34.0,
-    117.0,
-    48.0
+    17.0,
+    39.0,
+    24.0
    ],
    [
-    36.0,
-    120.0,
-    50.0
+    18.0,
+    40.0,
+    25.0
    ],
    [
+    22.0,
     44.0,
-    132.0,
-    58.0
+    29.0
    ]
   ],
   "id": 115,
   "optimal_assignment": [
-   1,
+   0,
    2,
-   0
+   1
   ],
-  "optimal_cost": 211.0,
+  "optimal_cost": 86.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -6090,33 +5804,31 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    96.0,
+    32.0,
     24.0
    ],
    [
-    102.0,
+    34.0,
     26.0
    ]
   ],
   "id": 116,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 122.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 58.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -6134,24 +5846,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     25.0,
-    45.0
+    15.0
    ],
    [
     32.0,
-    84.0
+    28.0
    ]
   ],
   "id": 117,
@@ -6159,8 +5869,8 @@
    1,
    0
   ],
-  "optimal_cost": 77.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 47.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -6178,23 +5888,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    56.0,
+    28.0,
     22.0
    ],
    [
-    50.0,
+    25.0,
     25.0
    ]
   ],
@@ -6203,8 +5911,8 @@
    1,
    0
   ],
-  "optimal_cost": 72.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 47.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -6222,24 +5930,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    42.0,
-    68.0
+    21.0,
+    34.0
    ],
    [
-    32.0,
-    58.0
+    16.0,
+    29.0
    ]
   ],
   "id": 119,
@@ -6247,7 +5953,7 @@
    0,
    1
   ],
-  "optimal_cost": 100.0,
+  "optimal_cost": 50.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -6270,37 +5976,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    105.0,
+    35.0,
     21.0,
-    117.0
+    39.0
    ],
    [
-    105.0,
+    35.0,
     21.0,
-    117.0
+    39.0
    ],
    [
-    93.0,
+    31.0,
     23.0,
-    105.0
+    35.0
    ]
   ],
   "id": 120,
@@ -6309,7 +6012,7 @@
    0,
    2
   ],
-  "optimal_cost": 231.0,
+  "optimal_cost": 91.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -6328,24 +6031,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    42.0,
-    42.0
+    14.0,
+    14.0
    ],
    [
-    78.0,
-    78.0
+    26.0,
+    26.0
    ]
   ],
   "id": 121,
@@ -6353,7 +6054,7 @@
    0,
    1
   ],
-  "optimal_cost": 120.0,
+  "optimal_cost": 40.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -6372,23 +6073,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    26.0,
+    13.0,
     17.0
    ],
    [
-    28.0,
+    14.0,
     20.0
    ]
   ],
@@ -6397,7 +6096,7 @@
    1,
    0
   ],
-  "optimal_cost": 45.0,
+  "optimal_cost": 31.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -6420,37 +6119,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    50.0,
-    50.0,
-    38.0
+    25.0,
+    25.0,
+    19.0
    ],
    [
-    44.0,
-    44.0,
-    32.0
+    22.0,
+    22.0,
+    16.0
    ],
    [
-    74.0,
-    74.0,
-    62.0
+    37.0,
+    37.0,
+    31.0
    ]
   ],
   "id": 123,
@@ -6459,7 +6155,7 @@
    1,
    0
   ],
-  "optimal_cost": 156.0,
+  "optimal_cost": 78.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -6478,14 +6174,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
@@ -6526,48 +6220,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     26.0,
-    52.0,
-    117.0
+    26.0,
+    39.0
    ],
    [
     19.0,
-    38.0,
-    96.0
+    19.0,
+    32.0
    ],
    [
     23.0,
-    46.0,
-    108.0
+    23.0,
+    36.0
    ]
   ],
   "id": 125,
   "optimal_assignment": [
    0,
-   2,
-   1
+   1,
+   2
   ],
-  "optimal_cost": 168.0,
+  "optimal_cost": 81.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -6584,14 +6275,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
@@ -6632,36 +6321,33 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    80.0,
-    86.0,
+    40.0,
+    43.0,
     30.0
    ],
    [
-    50.0,
-    56.0,
+    25.0,
+    28.0,
     21.0
    ],
    [
-    70.0,
-    76.0,
+    35.0,
+    38.0,
     25.0
    ]
   ],
@@ -6671,7 +6357,7 @@
    0,
    1
   ],
-  "optimal_cost": 156.0,
+  "optimal_cost": 93.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -6694,48 +6380,45 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    93.0,
+    31.0,
     32.0,
     32.0
    ],
    [
-    93.0,
+    31.0,
     32.0,
     32.0
    ],
    [
-    120.0,
+    40.0,
     41.0,
     41.0
    ]
   ],
   "id": 128,
   "optimal_assignment": [
-   1,
    0,
+   1,
    2
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 104.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -6752,14 +6435,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
@@ -6800,37 +6481,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    90.0,
+    30.0,
     28.0,
-    74.0
+    37.0
    ],
    [
-    57.0,
     19.0,
-    52.0
+    19.0,
+    26.0
    ],
    [
-    75.0,
+    25.0,
     29.0,
-    64.0
+    32.0
    ]
   ],
   "id": 130,
@@ -6839,7 +6517,7 @@
    0,
    2
   ],
-  "optimal_cost": 149.0,
+  "optimal_cost": 79.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -6858,24 +6536,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     32.0,
-    114.0
+    38.0
    ],
    [
     24.0,
-    90.0
+    30.0
    ]
   ],
   "id": 131,
@@ -6883,8 +6559,8 @@
    0,
    1
   ],
-  "optimal_cost": 122.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 62.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -6906,48 +6582,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
     19.0,
-    120.0,
-    62.0
+    40.0,
+    31.0
    ],
    [
     21.0,
-    90.0,
-    54.0
+    30.0,
+    27.0
    ],
    [
     26.0,
-    141.0,
-    76.0
+    47.0,
+    38.0
    ]
   ],
   "id": 132,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 178.0,
+  "optimal_cost": 87.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -6968,46 +6641,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    40.0,
-    60.0,
-    99.0
+    20.0,
+    20.0,
+    33.0
    ],
    [
-    58.0,
-    87.0,
-    126.0
+    29.0,
+    29.0,
+    42.0
    ],
    [
-    68.0,
-    102.0,
-    141.0
+    34.0,
+    34.0,
+    47.0
    ]
   ],
   "id": 133,
   "optimal_assignment": [
+   0,
    1,
-   2,
-   0
+   2
   ],
-  "optimal_cost": 254.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7030,46 +6700,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    68.0,
-    132.0,
+    34.0,
+    44.0,
     28.0
    ],
    [
-    70.0,
-    135.0,
+    35.0,
+    45.0,
     29.0
    ],
    [
-    76.0,
-    144.0,
+    38.0,
+    48.0,
     32.0
    ]
   ],
   "id": 134,
   "optimal_assignment": [
-   1,
+   2,
    0,
-   2
+   1
   ],
-  "optimal_cost": 234.0,
+  "optimal_cost": 111.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7092,37 +6759,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    40.0,
-    48.0,
-    36.0
+    20.0,
+    24.0,
+    18.0
    ],
    [
-    64.0,
-    72.0,
-    60.0
+    32.0,
+    36.0,
+    30.0
    ],
    [
-    44.0,
-    52.0,
-    40.0
+    22.0,
+    26.0,
+    20.0
    ]
   ],
   "id": 135,
@@ -7131,7 +6795,7 @@
    0,
    1
   ],
-  "optimal_cost": 152.0,
+  "optimal_cost": 76.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7150,24 +6814,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    93.0,
-    48.0
+    31.0,
+    24.0
    ],
    [
-    120.0,
-    62.0
+    40.0,
+    31.0
    ]
   ],
   "id": 136,
@@ -7175,7 +6837,7 @@
    0,
    1
   ],
-  "optimal_cost": 155.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -7198,46 +6860,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
     30.0,
-    138.0,
-    147.0
+    46.0,
+    49.0
    ],
    [
     17.0,
-    81.0,
-    90.0
+    27.0,
+    30.0
    ],
    [
     32.0,
-    144.0,
-    153.0
+    48.0,
+    51.0
    ]
   ],
   "id": 137,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 260.0,
+  "optimal_cost": 108.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7256,24 +6915,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    72.0,
-    81.0
+    24.0,
+    27.0
    ],
    [
-    72.0,
-    81.0
+    24.0,
+    27.0
    ]
   ],
   "id": 138,
@@ -7281,7 +6938,7 @@
    0,
    1
   ],
-  "optimal_cost": 153.0,
+  "optimal_cost": 51.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -7300,23 +6957,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    72.0,
+    24.0,
     31.0
    ],
    [
-    111.0,
+    37.0,
     38.0
    ]
   ],
@@ -7325,8 +6980,8 @@
    0,
    1
   ],
-  "optimal_cost": 110.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 62.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -7348,37 +7003,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    38.0,
-    56.0,
-    84.0
+    19.0,
+    28.0,
+    28.0
    ],
    [
-    56.0,
-    74.0,
-    111.0
+    28.0,
+    37.0,
+    37.0
    ],
    [
-    36.0,
-    54.0,
-    81.0
+    18.0,
+    27.0,
+    27.0
    ]
   ],
   "id": 140,
@@ -7387,7 +7039,7 @@
    1,
    2
   ],
-  "optimal_cost": 193.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7406,33 +7058,31 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     29.0,
-    105.0
+    35.0
    ],
    [
     38.0,
-    132.0
+    44.0
    ]
   ],
   "id": 141,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 143.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 73.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -7454,46 +7104,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    66.0,
     33.0,
-    117.0
+    33.0,
+    39.0
    ],
    [
-    72.0,
+    36.0,
     30.0,
-    126.0
+    42.0
    ],
    [
-    70.0,
     35.0,
-    123.0
+    35.0,
+    41.0
    ]
   ],
   "id": 142,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 217.0,
+  "optimal_cost": 104.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7516,36 +7163,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
     32.0,
-    114.0,
+    38.0,
     32.0
    ],
    [
     33.0,
-    117.0,
+    39.0,
     33.0
    ],
    [
     32.0,
-    114.0,
+    38.0,
     32.0
    ]
   ],
@@ -7555,9 +7199,9 @@
    2,
    1
   ],
-  "optimal_cost": 179.0,
+  "optimal_cost": 103.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -7578,37 +7222,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
     23.0,
-    60.0,
-    81.0
+    30.0,
+    27.0
    ],
    [
     21.0,
-    68.0,
-    111.0
+    34.0,
+    37.0
    ],
    [
     25.0,
-    64.0,
-    105.0
+    32.0,
+    35.0
    ]
   ],
   "id": 144,
@@ -7617,7 +7258,7 @@
    0,
    1
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 80.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7636,24 +7277,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    90.0,
-    129.0
+    30.0,
+    43.0
    ],
    [
-    72.0,
-    111.0
+    24.0,
+    37.0
    ]
   ],
   "id": 145,
@@ -7661,7 +7300,7 @@
    0,
    1
   ],
-  "optimal_cost": 201.0,
+  "optimal_cost": 67.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -7684,48 +7323,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    64.0,
+    32.0,
     36.0,
-    114.0
+    38.0
    ],
    [
-    48.0,
+    24.0,
     28.0,
-    90.0
+    30.0
    ],
    [
-    50.0,
+    25.0,
     29.0,
-    93.0
+    31.0
    ]
   ],
   "id": 146,
   "optimal_assignment": [
+   0,
    1,
-   2,
-   0
+   2
   ],
-  "optimal_cost": 176.0,
+  "optimal_cost": 91.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -7742,24 +7378,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     28.0,
-    45.0
+    15.0
    ],
    [
     31.0,
-    72.0
+    24.0
    ]
   ],
   "id": 147,
@@ -7767,7 +7401,7 @@
    1,
    0
   ],
-  "optimal_cost": 76.0,
+  "optimal_cost": 46.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -7786,23 +7420,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    42.0,
+    21.0,
     20.0
    ],
    [
-    56.0,
+    28.0,
     21.0
    ]
   ],
@@ -7811,7 +7443,7 @@
    0,
    1
   ],
-  "optimal_cost": 63.0,
+  "optimal_cost": 42.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -7834,37 +7466,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    90.0,
-    66.0,
-    52.0
+    30.0,
+    33.0,
+    26.0
    ],
    [
-    87.0,
-    64.0,
-    50.0
+    29.0,
+    32.0,
+    25.0
    ],
    [
-    126.0,
-    90.0,
-    76.0
+    42.0,
+    45.0,
+    38.0
    ]
   ],
   "id": 149,
@@ -7873,7 +7502,7 @@
    0,
    1
   ],
-  "optimal_cost": 229.0,
+  "optimal_cost": 100.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7896,37 +7525,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    58.0,
+    29.0,
     25.0,
-    58.0
+    29.0
    ],
    [
-    70.0,
+    35.0,
     25.0,
-    70.0
+    35.0
    ],
    [
-    64.0,
+    32.0,
     28.0,
-    64.0
+    32.0
    ]
   ],
   "id": 150,
@@ -7935,7 +7561,7 @@
    1,
    2
   ],
-  "optimal_cost": 147.0,
+  "optimal_cost": 86.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -7958,48 +7584,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
     24.0,
-    108.0,
+    36.0,
     33.0
    ],
    [
     20.0,
-    114.0,
+    38.0,
     29.0
    ],
    [
     14.0,
-    84.0,
+    28.0,
     23.0
    ]
   ],
   "id": 151,
   "optimal_assignment": [
-   0,
+   1,
    2,
-   1
+   0
   ],
-  "optimal_cost": 137.0,
+  "optimal_cost": 79.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -8016,23 +7639,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    46.0,
+    23.0,
     29.0
    ],
    [
-    60.0,
+    30.0,
     30.0
    ]
   ],
@@ -8041,8 +7662,8 @@
    0,
    1
   ],
-  "optimal_cost": 76.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 53.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -8060,24 +7681,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     32.0,
-    105.0
+    35.0
    ],
    [
     23.0,
-    72.0
+    24.0
    ]
   ],
   "id": 153,
@@ -8085,8 +7704,8 @@
    0,
    1
   ],
-  "optimal_cost": 104.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -8108,46 +7727,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    72.0,
-    40.0,
-    105.0
+    36.0,
+    20.0,
+    35.0
    ],
    [
-    82.0,
-    50.0,
-    120.0
+    41.0,
+    25.0,
+    40.0
    ],
    [
-    56.0,
-    24.0,
-    81.0
+    28.0,
+    12.0,
+    27.0
    ]
   ],
   "id": 154,
   "optimal_assignment": [
    1,
-   0,
-   2
+   2,
+   0
   ],
-  "optimal_cost": 203.0,
+  "optimal_cost": 88.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -8170,46 +7786,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    78.0,
-    99.0,
+    26.0,
+    33.0,
     23.0
    ],
    [
-    81.0,
-    102.0,
+    27.0,
+    34.0,
     24.0
    ],
    [
-    78.0,
-    99.0,
+    26.0,
+    33.0,
     23.0
    ]
   ],
   "id": 155,
   "optimal_assignment": [
-   0,
    2,
+   0,
    1
   ],
-  "optimal_cost": 201.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -8228,24 +7841,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     22.0,
-    75.0
+    25.0
    ],
    [
     21.0,
-    90.0
+    30.0
    ]
   ],
   "id": 156,
@@ -8253,8 +7864,8 @@
    1,
    0
   ],
-  "optimal_cost": 96.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 46.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -8276,36 +7887,33 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    99.0,
-    74.0,
+    33.0,
+    37.0,
     24.0
    ],
    [
-    48.0,
-    52.0,
+    16.0,
+    26.0,
     19.0
    ],
    [
-    84.0,
-    64.0,
+    28.0,
+    32.0,
     19.0
    ]
   ],
@@ -8315,9 +7923,9 @@
    0,
    1
   ],
-  "optimal_cost": 136.0,
+  "optimal_cost": 72.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -8334,24 +7942,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    62.0,
-    70.0
+    31.0,
+    35.0
    ],
    [
-    68.0,
-    76.0
+    34.0,
+    38.0
    ]
   ],
   "id": 158,
@@ -8359,7 +7965,7 @@
    0,
    1
   ],
-  "optimal_cost": 138.0,
+  "optimal_cost": 69.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -8382,37 +7988,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    44.0,
-    50.0,
-    84.0
+    22.0,
+    25.0,
+    28.0
    ],
    [
-    26.0,
-    32.0,
-    39.0
+    13.0,
+    16.0,
+    13.0
    ],
    [
-    48.0,
-    54.0,
-    90.0
+    24.0,
+    27.0,
+    30.0
    ]
   ],
   "id": 159,
@@ -8421,7 +8024,7 @@
    2,
    1
   ],
-  "optimal_cost": 137.0,
+  "optimal_cost": 62.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -8444,48 +8047,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
     31.0,
-    120.0,
-    74.0
+    40.0,
+    37.0
    ],
    [
     27.0,
-    90.0,
-    54.0
+    30.0,
+    27.0
    ],
    [
     24.0,
-    93.0,
-    56.0
+    31.0,
+    28.0
    ]
   ],
   "id": 160,
   "optimal_assignment": [
    0,
-   1,
-   2
+   2,
+   1
   ],
-  "optimal_cost": 177.0,
+  "optimal_cost": 89.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -8502,24 +8102,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
     27.0,
-    105.0
+    35.0
    ],
    [
     31.0,
-    99.0
+    33.0
    ]
   ],
   "id": 161,
@@ -8527,8 +8125,8 @@
    0,
    1
   ],
-  "optimal_cost": 126.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 60.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -8550,36 +8148,33 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    129.0,
-    56.0,
+    43.0,
+    28.0,
     28.0
    ],
    [
-    105.0,
-    40.0,
+    35.0,
+    20.0,
     22.0
    ],
    [
-    78.0,
-    22.0,
+    26.0,
+    11.0,
     15.0
    ]
   ],
@@ -8589,9 +8184,9 @@
    1,
    0
   ],
-  "optimal_cost": 146.0,
+  "optimal_cost": 74.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -8612,46 +8207,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
     27.0,
-    117.0,
-    117.0
+    39.0,
+    39.0
    ],
    [
     28.0,
-    102.0,
-    102.0
+    34.0,
+    34.0
    ],
    [
     38.0,
-    150.0,
-    150.0
+    50.0,
+    50.0
    ]
   ],
   "id": 163,
   "optimal_assignment": [
-   2,
+   0,
    1,
-   0
+   2
   ],
-  "optimal_cost": 257.0,
+  "optimal_cost": 111.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -8670,23 +8262,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    54.0,
+    27.0,
     30.0
    ],
    [
-    52.0,
+    26.0,
     31.0
    ]
   ],
@@ -8695,8 +8285,8 @@
    1,
    0
   ],
-  "optimal_cost": 82.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -8714,23 +8304,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    78.0,
+    39.0,
     26.0
    ],
    [
-    74.0,
+    37.0,
     24.0
    ]
   ],
@@ -8739,7 +8327,7 @@
    1,
    0
   ],
-  "optimal_cost": 100.0,
+  "optimal_cost": 63.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -8758,14 +8346,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
@@ -8806,37 +8392,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    88.0,
+    44.0,
     38.0,
-    111.0
+    37.0
    ],
    [
-    54.0,
+    27.0,
     23.0,
-    60.0
+    20.0
    ],
    [
-    58.0,
     29.0,
-    48.0
+    29.0,
+    16.0
    ]
   ],
   "id": 167,
@@ -8845,9 +8428,9 @@
    0,
    2
   ],
-  "optimal_cost": 140.0,
+  "optimal_cost": 81.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -8864,23 +8447,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    81.0,
+    27.0,
     23.0
    ],
    [
-    102.0,
+    34.0,
     28.0
    ]
   ],
@@ -8889,8 +8470,8 @@
    0,
    1
   ],
-  "optimal_cost": 109.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 55.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -8912,37 +8493,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
     38.0,
-    111.0,
-    150.0
+    37.0,
+    50.0
    ],
    [
     40.0,
-    117.0,
-    156.0
+    39.0,
+    52.0
    ],
    [
     31.0,
-    90.0,
-    129.0
+    30.0,
+    43.0
    ]
   ],
   "id": 169,
@@ -8951,7 +8529,7 @@
    0,
    2
   ],
-  "optimal_cost": 280.0,
+  "optimal_cost": 120.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -8970,14 +8548,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
@@ -9018,37 +8594,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    68.0,
+    34.0,
     27.0,
-    68.0
+    34.0
    ],
    [
-    42.0,
+    21.0,
     20.0,
-    42.0
+    21.0
    ],
    [
-    64.0,
+    32.0,
     25.0,
-    64.0
+    32.0
    ]
   ],
   "id": 171,
@@ -9057,7 +8630,7 @@
    0,
    2
   ],
-  "optimal_cost": 133.0,
+  "optimal_cost": 80.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -9080,20 +8653,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
@@ -9142,37 +8712,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    144.0,
-    66.0,
-    96.0
+    48.0,
+    33.0,
+    32.0
    ],
    [
-    87.0,
-    36.0,
-    39.0
+    29.0,
+    18.0,
+    13.0
    ],
    [
-    96.0,
-    34.0,
-    48.0
+    32.0,
+    17.0,
+    16.0
    ]
   ],
   "id": 173,
@@ -9181,7 +8748,7 @@
    2,
    0
   ],
-  "optimal_cost": 201.0,
+  "optimal_cost": 78.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.748893571891069
  },
@@ -9200,32 +8767,30 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    56.0,
+    28.0,
     22.0
    ],
    [
-    74.0,
+    37.0,
     31.0
    ]
   ],
   "id": 174,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 87.0,
+  "optimal_cost": 59.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9248,37 +8813,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    117.0,
+    39.0,
     31.0,
-    78.0
+    39.0
    ],
    [
-    75.0,
-    23.0,
-    50.0
-   ],
-   [
-    81.0,
     25.0,
-    54.0
+    23.0,
+    25.0
+   ],
+   [
+    27.0,
+    25.0,
+    27.0
    ]
   ],
   "id": 175,
@@ -9287,9 +8849,9 @@
    0,
    2
   ],
-  "optimal_cost": 160.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -9310,37 +8872,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    132.0,
-    50.0,
-    56.0
+    44.0,
+    25.0,
+    28.0
    ],
    [
-    135.0,
-    52.0,
-    58.0
+    45.0,
+    26.0,
+    29.0
    ],
    [
-    87.0,
-    20.0,
-    26.0
+    29.0,
+    10.0,
+    13.0
    ]
   ],
   "id": 176,
@@ -9349,9 +8908,9 @@
    2,
    0
   ],
-  "optimal_cost": 195.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -9368,24 +8927,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    114.0,
-    56.0
+    38.0,
+    28.0
    ],
    [
-    93.0,
-    42.0
+    31.0,
+    21.0
    ]
   ],
   "id": 177,
@@ -9393,7 +8950,7 @@
    1,
    0
   ],
-  "optimal_cost": 149.0,
+  "optimal_cost": 59.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9416,36 +8973,33 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    114.0,
-    64.0,
+    38.0,
+    32.0,
     25.0
    ],
    [
-    87.0,
-    46.0,
+    29.0,
+    23.0,
     16.0
    ],
    [
-    69.0,
-    34.0,
+    23.0,
+    17.0,
     16.0
    ]
   ],
@@ -9455,9 +9009,9 @@
    1,
    0
   ],
-  "optimal_cost": 140.0,
+  "optimal_cost": 71.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -9474,33 +9028,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    22.0,
-    78.0
+    11.0,
+    26.0
    ],
    [
-    38.0,
-    102.0
+    19.0,
+    34.0
    ]
   ],
   "id": 179,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 116.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 45.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -9518,14 +9070,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
@@ -9562,24 +9112,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    69.0,
-    90.0
+    23.0,
+    30.0
    ],
    [
-    99.0,
-    120.0
+    33.0,
+    40.0
    ]
   ],
   "id": 181,
@@ -9587,7 +9135,7 @@
    0,
    1
   ],
-  "optimal_cost": 189.0,
+  "optimal_cost": 63.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9606,24 +9154,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    24.0,
-    75.0
+    12.0,
+    25.0
    ],
    [
-    38.0,
-    114.0
+    19.0,
+    38.0
    ]
   ],
   "id": 182,
@@ -9631,8 +9177,8 @@
    1,
    0
   ],
-  "optimal_cost": 113.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 44.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -9650,33 +9196,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    24.0,
+    12.0,
     28.0
    ],
    [
-    20.0,
+    10.0,
     26.0
    ]
   ],
   "id": 183,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 48.0,
-  "best_gamma": 4.45058959258554,
+  "optimal_cost": 38.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -9694,23 +9238,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    54.0,
+    18.0,
     15.0
    ],
    [
-    42.0,
+    14.0,
     21.0
    ]
   ],
@@ -9719,7 +9261,7 @@
    1,
    0
   ],
-  "optimal_cost": 57.0,
+  "optimal_cost": 29.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9738,24 +9280,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    38.0,
-    50.0
+    19.0,
+    25.0
    ],
    [
-    54.0,
-    66.0
+    27.0,
+    33.0
    ]
   ],
   "id": 185,
@@ -9763,7 +9303,7 @@
    0,
    1
   ],
-  "optimal_cost": 104.0,
+  "optimal_cost": 52.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9782,24 +9322,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    114.0,
-    126.0
+    38.0,
+    42.0
    ],
    [
-    90.0,
-    102.0
+    30.0,
+    34.0
    ]
   ],
   "id": 186,
@@ -9807,7 +9345,7 @@
    0,
    1
   ],
-  "optimal_cost": 216.0,
+  "optimal_cost": 72.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9830,37 +9368,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    111.0,
-    54.0,
-    74.0
+    37.0,
+    27.0,
+    37.0
    ],
    [
-    84.0,
-    36.0,
-    56.0
+    28.0,
+    18.0,
+    28.0
    ],
    [
-    123.0,
-    62.0,
-    82.0
+    41.0,
+    31.0,
+    41.0
    ]
   ],
   "id": 187,
@@ -9869,7 +9404,7 @@
    0,
    2
   ],
-  "optimal_cost": 220.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -9888,32 +9423,30 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    52.0,
-    123.0
+    26.0,
+    41.0
    ],
    [
-    74.0,
-    156.0
+    37.0,
+    52.0
    ]
   ],
   "id": 188,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 197.0,
+  "optimal_cost": 78.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9932,23 +9465,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    66.0,
+    33.0,
     27.0
    ],
    [
-    42.0,
+    21.0,
     21.0
    ]
   ],
@@ -9957,7 +9488,7 @@
    1,
    0
   ],
-  "optimal_cost": 69.0,
+  "optimal_cost": 48.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -9980,37 +9511,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    34.0,
     17.0,
-    42.0
-   ],
-   [
-    68.0,
-    34.0,
-    76.0
+    17.0,
+    21.0
    ],
    [
     34.0,
+    34.0,
+    38.0
+   ],
+   [
+    17.0,
     23.0,
-    42.0
+    21.0
    ]
   ],
   "id": 190,
@@ -10019,9 +9547,9 @@
    1,
    2
   ],
-  "optimal_cost": 110.0,
+  "optimal_cost": 72.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -10038,14 +9566,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
@@ -10086,37 +9612,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    78.0,
-    52.0,
-    72.0
+    39.0,
+    26.0,
+    36.0
    ],
    [
-    66.0,
+    33.0,
+    20.0,
+    30.0
+   ],
+   [
     40.0,
-    60.0
-   ],
-   [
-    80.0,
-    54.0,
-    74.0
+    27.0,
+    37.0
    ]
   ],
   "id": 192,
@@ -10125,7 +9648,7 @@
    2,
    0
   ],
-  "optimal_cost": 192.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -10144,24 +9667,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    74.0,
-    80.0
+    37.0,
+    40.0
    ],
    [
-    66.0,
-    72.0
+    33.0,
+    36.0
    ]
   ],
   "id": 193,
@@ -10169,7 +9690,7 @@
    0,
    1
   ],
-  "optimal_cost": 146.0,
+  "optimal_cost": 73.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -10188,33 +9709,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    56.0,
-    102.0
+    28.0,
+    34.0
    ],
    [
-    60.0,
-    108.0
+    30.0,
+    36.0
    ]
   ],
   "id": 194,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 162.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 64.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -10232,24 +9751,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
     28.0,
-    42.0
+    21.0
    ],
    [
     31.0,
-    48.0
+    24.0
    ]
   ],
   "id": 195,
@@ -10257,7 +9774,7 @@
    1,
    0
   ],
-  "optimal_cost": 73.0,
+  "optimal_cost": 52.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -10276,24 +9793,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
     33.0,
-    86.0
+    43.0
    ],
    [
     30.0,
-    80.0
+    40.0
    ]
   ],
   "id": 196,
@@ -10301,7 +9816,7 @@
    0,
    1
   ],
-  "optimal_cost": 113.0,
+  "optimal_cost": 73.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -10320,14 +9835,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
@@ -10368,37 +9881,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    138.0,
+    46.0,
     31.0,
-    150.0
+    50.0
    ],
    [
-    105.0,
+    35.0,
     20.0,
-    117.0
+    39.0
    ],
    [
-    78.0,
+    26.0,
     17.0,
-    90.0
+    30.0
    ]
   ],
   "id": 198,
@@ -10407,7 +9917,7 @@
    0,
    2
   ],
-  "optimal_cost": 226.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -10430,37 +9940,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    64.0,
-    60.0,
-    64.0
+    32.0,
+    30.0,
+    32.0
    ],
    [
-    78.0,
-    74.0,
-    78.0
+    39.0,
+    37.0,
+    39.0
    ],
    [
-    68.0,
-    64.0,
-    68.0
+    34.0,
+    32.0,
+    34.0
    ]
   ],
   "id": 199,
@@ -10469,7 +9976,7 @@
    0,
    2
   ],
-  "optimal_cost": 206.0,
+  "optimal_cost": 103.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -10488,14 +9995,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
@@ -10532,24 +10037,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     39.0,
-    78.0
+    39.0
    ],
    [
     30.0,
-    60.0
+    30.0
    ]
   ],
   "id": 201,
@@ -10557,8 +10060,8 @@
    0,
    1
   ],
-  "optimal_cost": 99.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 69.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -10576,24 +10079,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    54.0,
-    36.0
+    27.0,
+    18.0
    ],
    [
-    88.0,
-    70.0
+    44.0,
+    35.0
    ]
   ],
   "id": 202,
@@ -10601,7 +10102,7 @@
    1,
    0
   ],
-  "optimal_cost": 124.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -10620,32 +10121,30 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     30.0,
-    48.0
+    24.0
    ],
    [
     23.0,
-    34.0
+    17.0
    ]
   ],
   "id": 203,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 64.0,
+  "optimal_cost": 47.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -10664,23 +10163,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    90.0,
+    30.0,
     26.0
    ],
    [
-    81.0,
+    27.0,
     23.0
    ]
   ],
@@ -10689,8 +10186,8 @@
    1,
    0
   ],
-  "optimal_cost": 107.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 53.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -10708,33 +10205,31 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    60.0,
-    108.0
+    30.0,
+    36.0
    ],
    [
-    70.0,
-    123.0
+    35.0,
+    41.0
    ]
   ],
   "id": 205,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 178.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 71.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -10756,37 +10251,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     34.0,
-    132.0,
-    111.0
+    44.0,
+    37.0
    ],
    [
     28.0,
-    114.0,
-    93.0
+    38.0,
+    31.0
    ],
    [
     25.0,
-    93.0,
-    72.0
+    31.0,
+    24.0
    ]
   ],
   "id": 206,
@@ -10795,7 +10287,7 @@
    2,
    1
   ],
-  "optimal_cost": 220.0,
+  "optimal_cost": 96.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -10814,23 +10306,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    46.0,
+    23.0,
     23.0
    ],
    [
-    50.0,
+    25.0,
     25.0
    ]
   ],
@@ -10839,8 +10329,8 @@
    0,
    1
   ],
-  "optimal_cost": 71.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 48.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -10862,46 +10352,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    64.0,
+    32.0,
     33.0,
-    70.0
+    35.0
    ],
    [
-    44.0,
+    22.0,
     23.0,
-    50.0
+    25.0
    ],
    [
-    38.0,
+    19.0,
     20.0,
-    44.0
+    22.0
    ]
   ],
   "id": 208,
   "optimal_assignment": [
-   1,
    0,
+   1,
    2
   ],
-  "optimal_cost": 121.0,
+  "optimal_cost": 77.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -10920,24 +10407,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     18.0,
-    40.0
+    20.0
    ],
    [
     23.0,
-    58.0
+    29.0
    ]
   ],
   "id": 209,
@@ -10945,7 +10430,7 @@
    1,
    0
   ],
-  "optimal_cost": 63.0,
+  "optimal_cost": 43.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -10968,48 +10453,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
     13.0,
-    48.0,
-    20.0
+    16.0,
+    10.0
    ],
    [
     24.0,
-    87.0,
-    46.0
+    29.0,
+    23.0
    ],
    [
     17.0,
-    66.0,
-    32.0
+    22.0,
+    16.0
    ]
   ],
   "id": 210,
   "optimal_assignment": [
-   1,
+   2,
    0,
-   2
+   1
   ],
-  "optimal_cost": 104.0,
+  "optimal_cost": 56.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11026,24 +10508,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    64.0,
-    87.0
+    32.0,
+    29.0
    ],
    [
-    58.0,
-    60.0
+    29.0,
+    20.0
    ]
   ],
   "id": 211,
@@ -11051,7 +10531,7 @@
    0,
    1
   ],
-  "optimal_cost": 124.0,
+  "optimal_cost": 52.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -11074,37 +10554,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    75.0,
+    25.0,
     29.0,
-    93.0
+    31.0
    ],
    [
-    90.0,
+    30.0,
     28.0,
-    108.0
+    36.0
    ],
    [
-    63.0,
+    21.0,
     19.0,
-    81.0
+    27.0
    ]
   ],
   "id": 212,
@@ -11113,7 +10590,7 @@
    1,
    2
   ],
-  "optimal_cost": 184.0,
+  "optimal_cost": 80.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11136,37 +10613,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     24.0,
-    60.0,
-    60.0
+    30.0,
+    30.0
    ],
    [
     17.0,
-    46.0,
-    46.0
+    23.0,
+    23.0
    ],
    [
     25.0,
-    50.0,
-    50.0
+    25.0,
+    25.0
    ]
   ],
   "id": 213,
@@ -11175,7 +10649,7 @@
    1,
    2
   ],
-  "optimal_cost": 120.0,
+  "optimal_cost": 72.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11198,46 +10672,43 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     28.0,
-    74.0,
-    90.0
+    37.0,
+    30.0
    ],
    [
     27.0,
-    72.0,
-    87.0
+    36.0,
+    29.0
    ],
    [
     24.0,
-    66.0,
-    78.0
+    33.0,
+    26.0
    ]
   ],
   "id": 214,
   "optimal_assignment": [
    0,
-   1,
-   2
+   2,
+   1
   ],
-  "optimal_cost": 178.0,
+  "optimal_cost": 90.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11256,24 +10727,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    129.0,
-    82.0
+    43.0,
+    41.0
    ],
    [
-    120.0,
-    76.0
+    40.0,
+    38.0
    ]
   ],
   "id": 215,
@@ -11281,8 +10750,8 @@
    1,
    0
   ],
-  "optimal_cost": 202.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 81.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -11304,46 +10773,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    87.0,
-    64.0,
-    64.0
+    29.0,
+    32.0,
+    32.0
    ],
    [
-    81.0,
-    60.0,
-    60.0
+    27.0,
+    30.0,
+    30.0
    ],
    [
-    108.0,
-    78.0,
-    78.0
+    36.0,
+    39.0,
+    39.0
    ]
   ],
   "id": 216,
   "optimal_assignment": [
-   1,
    0,
+   1,
    2
   ],
-  "optimal_cost": 223.0,
+  "optimal_cost": 98.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11362,24 +10828,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    58.0,
-    32.0
+    29.0,
+    16.0
    ],
    [
-    60.0,
-    34.0
+    30.0,
+    17.0
    ]
   ],
   "id": 217,
@@ -11387,7 +10851,7 @@
    1,
    0
   ],
-  "optimal_cost": 92.0,
+  "optimal_cost": 46.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -11410,48 +10874,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
     29.0,
-    99.0,
+    33.0,
     22.0
    ],
    [
     20.0,
-    78.0,
+    26.0,
     13.0
    ],
    [
     30.0,
-    114.0,
+    38.0,
     23.0
    ]
   ],
   "id": 218,
   "optimal_assignment": [
-   2,
    1,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 130.0,
+  "optimal_cost": 76.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11472,37 +10933,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
     18.0,
-    69.0,
-    96.0
+    23.0,
+    32.0
    ],
    [
     24.0,
-    93.0,
-    120.0
+    31.0,
+    40.0
    ],
    [
     27.0,
-    120.0,
-    147.0
+    40.0,
+    49.0
    ]
   ],
   "id": 219,
@@ -11511,9 +10969,9 @@
    2,
    0
   ],
-  "optimal_cost": 216.0,
+  "optimal_cost": 90.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11530,24 +10988,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    93.0,
-    54.0
+    31.0,
+    18.0
    ],
    [
-    153.0,
-    114.0
+    51.0,
+    38.0
    ]
   ],
   "id": 220,
@@ -11555,7 +11011,7 @@
    1,
    0
   ],
-  "optimal_cost": 207.0,
+  "optimal_cost": 69.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -11578,20 +11034,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
@@ -11640,37 +11093,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
+    18.0,
+    25.0,
+    21.0
+   ],
+   [
+    29.0,
     36.0,
-    50.0,
-    42.0
+    32.0
    ],
    [
-    58.0,
-    72.0,
-    64.0
-   ],
-   [
-    30.0,
-    44.0,
-    36.0
+    15.0,
+    22.0,
+    18.0
    ]
   ],
   "id": 222,
@@ -11679,7 +11129,7 @@
    2,
    1
   ],
-  "optimal_cost": 144.0,
+  "optimal_cost": 72.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11702,48 +11152,45 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    126.0,
+    42.0,
     21.0,
-    46.0
+    23.0
    ],
    [
-    96.0,
+    32.0,
     17.0,
-    26.0
+    13.0
    ],
    [
-    156.0,
+    52.0,
     31.0,
-    66.0
+    33.0
    ]
   ],
   "id": 223,
   "optimal_assignment": [
+   1,
    2,
-   0,
-   1
+   0
   ],
-  "optimal_cost": 173.0,
+  "optimal_cost": 86.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11764,35 +11211,32 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    32.0,
+    16.0,
     14.0,
     16.0
    ],
    [
-    64.0,
+    32.0,
     26.0,
     28.0
    ],
    [
-    40.0,
+    20.0,
     16.0,
     18.0
    ]
@@ -11800,12 +11244,12 @@
   "id": 224,
   "optimal_assignment": [
    0,
-   2,
-   1
+   1,
+   2
   ],
-  "optimal_cost": 76.0,
+  "optimal_cost": 60.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11826,36 +11270,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
     19.0,
-    42.0,
+    21.0,
     18.0
    ],
    [
     30.0,
-    76.0,
+    38.0,
     29.0
    ],
    [
     19.0,
-    54.0,
+    27.0,
     18.0
    ]
   ],
@@ -11865,9 +11306,9 @@
    0,
    2
   ],
-  "optimal_cost": 90.0,
+  "optimal_cost": 69.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -11888,46 +11329,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    135.0,
-    78.0,
-    90.0
+    45.0,
+    39.0,
+    45.0
    ],
    [
-    90.0,
-    48.0,
-    60.0
+    30.0,
+    24.0,
+    30.0
    ],
    [
-    84.0,
-    44.0,
-    56.0
+    28.0,
+    22.0,
+    28.0
    ]
   ],
   "id": 226,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 222.0,
+  "optimal_cost": 97.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -11946,24 +11384,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    84.0,
-    102.0
+    28.0,
+    34.0
    ],
    [
-    84.0,
-    102.0
+    28.0,
+    34.0
    ]
   ],
   "id": 227,
@@ -11971,7 +11407,7 @@
    0,
    1
   ],
-  "optimal_cost": 186.0,
+  "optimal_cost": 62.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -11994,37 +11430,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
     22.0,
-    76.0,
-    50.0
+    38.0,
+    25.0
    ],
    [
     20.0,
-    60.0,
-    34.0
+    30.0,
+    17.0
    ],
    [
     19.0,
-    58.0,
-    32.0
+    29.0,
+    16.0
    ]
   ],
   "id": 228,
@@ -12033,9 +11466,9 @@
    2,
    1
   ],
-  "optimal_cost": 114.0,
+  "optimal_cost": 68.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -12056,37 +11489,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     23.0,
     29.0,
-    50.0
+    25.0
    ],
    [
     20.0,
     26.0,
-    40.0
+    20.0
    ],
    [
     21.0,
     27.0,
-    54.0
+    27.0
    ]
   ],
   "id": 229,
@@ -12095,7 +11525,7 @@
    2,
    1
   ],
-  "optimal_cost": 90.0,
+  "optimal_cost": 70.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -12118,36 +11548,33 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    80.0,
-    74.0,
+    40.0,
+    37.0,
     27.0
    ],
    [
-    70.0,
-    64.0,
+    35.0,
+    32.0,
     22.0
    ],
    [
-    72.0,
-    66.0,
+    36.0,
+    33.0,
     23.0
    ]
   ],
@@ -12157,7 +11584,7 @@
    1,
    0
   ],
-  "optimal_cost": 163.0,
+  "optimal_cost": 95.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -12176,24 +11603,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
     27.0,
-    90.0
+    30.0
    ],
    [
     29.0,
-    132.0
+    44.0
    ]
   ],
   "id": 231,
@@ -12201,8 +11626,8 @@
    1,
    0
   ],
-  "optimal_cost": 119.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 59.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -12224,36 +11649,33 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
    [
     31.0,
-    129.0,
+    43.0,
     29.0
    ],
    [
     25.0,
-    93.0,
+    31.0,
     23.0
    ],
    [
     31.0,
-    129.0,
+    43.0,
     29.0
    ]
   ],
@@ -12263,9 +11685,9 @@
    1,
    0
   ],
-  "optimal_cost": 153.0,
+  "optimal_cost": 91.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -12286,46 +11708,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    38.0,
+    19.0,
     26.0,
     26.0
    ],
    [
-    28.0,
+    14.0,
     21.0,
     21.0
    ],
    [
-    30.0,
+    15.0,
     28.0,
     28.0
    ]
   ],
   "id": 233,
   "optimal_assignment": [
-   1,
    2,
+   1,
    0
   ],
-  "optimal_cost": 77.0,
+  "optimal_cost": 62.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -12344,24 +11763,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    48.0,
-    44.0
+    24.0,
+    22.0
    ],
    [
-    56.0,
-    52.0
+    28.0,
+    26.0
    ]
   ],
   "id": 234,
@@ -12369,7 +11786,7 @@
    1,
    0
   ],
-  "optimal_cost": 100.0,
+  "optimal_cost": 50.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -12392,46 +11809,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    126.0,
-    40.0,
-    78.0
+    42.0,
+    20.0,
+    26.0
    ],
    [
-    138.0,
+    46.0,
+    24.0,
+    30.0
+   ],
+   [
     48.0,
-    90.0
-   ],
-   [
-    144.0,
-    52.0,
-    96.0
+    26.0,
+    32.0
    ]
   ],
   "id": 235,
   "optimal_assignment": [
+   1,
    2,
-   0,
-   1
+   0
   ],
-  "optimal_cost": 268.0,
+  "optimal_cost": 98.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -12450,23 +11864,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    114.0,
+    38.0,
     30.0
    ],
    [
-    81.0,
+    27.0,
     21.0
    ]
   ],
@@ -12475,8 +11887,8 @@
    1,
    0
   ],
-  "optimal_cost": 111.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 57.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -12494,14 +11906,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
@@ -12538,24 +11948,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
     17.0,
-    87.0
+    29.0
    ],
    [
     27.0,
-    129.0
+    43.0
    ]
   ],
   "id": 238,
@@ -12563,8 +11971,8 @@
    1,
    0
   ],
-  "optimal_cost": 114.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -12586,48 +11994,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
     19.0,
-    57.0,
+    19.0,
     22.0
    ],
    [
     25.0,
-    81.0,
+    27.0,
     28.0
    ],
    [
     23.0,
-    63.0,
+    21.0,
     26.0
    ]
   ],
   "id": 239,
   "optimal_assignment": [
-   1,
    2,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 108.0,
+  "optimal_cost": 68.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -12648,48 +12053,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    54.0,
-    138.0,
+    27.0,
+    46.0,
     27.0
    ],
    [
-    36.0,
-    111.0,
+    18.0,
+    37.0,
     24.0
    ],
    [
-    56.0,
-    141.0,
+    28.0,
+    47.0,
     28.0
    ]
   ],
   "id": 240,
   "optimal_assignment": [
+   2,
    0,
-   1,
-   2
+   1
   ],
-  "optimal_cost": 193.0,
+  "optimal_cost": 92.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -12710,46 +12112,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
-    42.0,
     21.0,
-    54.0
+    21.0,
+    18.0
    ],
    [
-    52.0,
     26.0,
-    69.0
+    26.0,
+    23.0
    ],
    [
-    40.0,
+    20.0,
     18.0,
-    51.0
+    17.0
    ]
   ],
   "id": 241,
   "optimal_assignment": [
+   2,
    0,
-   1,
-   2
+   1
   ],
-  "optimal_cost": 119.0,
+  "optimal_cost": 62.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -12768,24 +12167,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    108.0,
-    66.0
+    36.0,
+    33.0
    ],
    [
-    78.0,
-    58.0
+    26.0,
+    29.0
    ]
   ],
   "id": 242,
@@ -12793,7 +12190,7 @@
    1,
    0
   ],
-  "optimal_cost": 144.0,
+  "optimal_cost": 59.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -12812,24 +12209,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     31.0,
-    74.0
+    37.0
    ],
    [
     31.0,
-    74.0
+    37.0
    ]
   ],
   "id": 243,
@@ -12837,8 +12232,8 @@
    0,
    1
   ],
-  "optimal_cost": 105.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 68.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -12856,24 +12251,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     17.0,
-    36.0
+    18.0
    ],
    [
     23.0,
-    60.0
+    30.0
    ]
   ],
   "id": 244,
@@ -12881,8 +12274,8 @@
    1,
    0
   ],
-  "optimal_cost": 59.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 41.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -12900,24 +12293,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    66.0,
-    66.0
+    33.0,
+    33.0
    ],
    [
-    60.0,
-    60.0
+    30.0,
+    30.0
    ]
   ],
   "id": 245,
@@ -12925,7 +12316,7 @@
    0,
    1
   ],
-  "optimal_cost": 126.0,
+  "optimal_cost": 63.0,
   "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
@@ -12948,48 +12339,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    44.0,
-    30.0,
-    111.0
+    22.0,
+    15.0,
+    37.0
    ],
    [
-    40.0,
-    26.0,
-    105.0
+    20.0,
+    13.0,
+    35.0
    ],
    [
-    64.0,
-    50.0,
-    141.0
+    32.0,
+    25.0,
+    47.0
    ]
   ],
   "id": 246,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 199.0,
+  "optimal_cost": 82.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -13006,24 +12394,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    }
   ],
   "cost": [
    [
     39.0,
-    105.0
+    35.0
    ],
    [
     40.0,
-    108.0
+    36.0
    ]
   ],
   "id": 247,
@@ -13031,8 +12417,8 @@
    1,
    0
   ],
-  "optimal_cost": 145.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 75.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -13050,32 +12436,30 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    48.0,
-    90.0
+    24.0,
+    30.0
    ],
    [
-    70.0,
-    123.0
+    35.0,
+    41.0
    ]
   ],
   "id": 248,
   "optimal_assignment": [
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 160.0,
+  "optimal_cost": 65.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -13098,37 +12482,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    108.0,
-    46.0,
-    114.0
+    36.0,
+    23.0,
+    38.0
    ],
    [
-    90.0,
-    34.0,
-    96.0
+    30.0,
+    17.0,
+    32.0
    ],
    [
-    54.0,
-    22.0,
-    60.0
+    18.0,
+    11.0,
+    20.0
    ]
   ],
   "id": 249,
@@ -13137,7 +12518,7 @@
    0,
    2
   ],
-  "optimal_cost": 196.0,
+  "optimal_cost": 73.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13160,37 +12541,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
-    144.0,
-    117.0,
-    105.0
+    48.0,
+    39.0,
+    35.0
    ],
    [
-    120.0,
-    93.0,
-    81.0
+    40.0,
+    31.0,
+    27.0
    ],
    [
-    99.0,
-    72.0,
-    60.0
+    33.0,
+    24.0,
+    20.0
    ]
   ],
   "id": 250,
@@ -13199,7 +12577,7 @@
    1,
    0
   ],
-  "optimal_cost": 297.0,
+  "optimal_cost": 99.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13222,46 +12600,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
    [
-    66.0,
+    33.0,
     25.0,
     27.0
    ],
    [
-    70.0,
+    35.0,
     27.0,
     29.0
    ],
    [
-    76.0,
+    38.0,
     30.0,
     32.0
    ]
   ],
   "id": 251,
   "optimal_assignment": [
-   0,
+   1,
    2,
-   1
+   0
   ],
-  "optimal_cost": 125.0,
+  "optimal_cost": 92.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13280,24 +12655,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    66.0,
-    135.0
+    33.0,
+    45.0
    ],
    [
-    26.0,
-    69.0
+    13.0,
+    23.0
    ]
   ],
   "id": 252,
@@ -13305,8 +12678,8 @@
    0,
    1
   ],
-  "optimal_cost": 135.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -13328,35 +12701,32 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    132.0,
+    44.0,
     26.0,
     35.0
    ],
    [
-    120.0,
+    40.0,
     22.0,
     31.0
    ],
    [
-    114.0,
+    38.0,
     20.0,
     29.0
    ]
@@ -13367,9 +12737,9 @@
    2,
    0
   ],
-  "optimal_cost": 171.0,
+  "optimal_cost": 95.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -13386,14 +12756,12 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    }
   ],
   "cost": [
@@ -13430,23 +12798,21 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    44.0,
+    22.0,
     18.0
    ],
    [
-    48.0,
+    24.0,
     26.0
    ]
   ],
@@ -13455,7 +12821,7 @@
    1,
    0
   ],
-  "optimal_cost": 66.0,
+  "optimal_cost": 42.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -13478,46 +12844,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    }
   ],
   "cost": [
    [
-    40.0,
-    26.0,
+    20.0,
+    13.0,
     26.0
    ],
    [
-    46.0,
-    32.0,
+    23.0,
+    16.0,
     29.0
    ],
    [
-    32.0,
-    18.0,
+    16.0,
+    9.0,
     22.0
    ]
   ],
   "id": 256,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 87.0,
+  "optimal_cost": 58.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13536,24 +12899,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
     33.0,
-    90.0
+    30.0
    ],
    [
     39.0,
-    126.0
+    42.0
    ]
   ],
   "id": 257,
@@ -13561,8 +12922,8 @@
    1,
    0
   ],
-  "optimal_cost": 129.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 69.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -13584,20 +12945,17 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
@@ -13642,24 +13000,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
-    123.0,
-    58.0
+    41.0,
+    29.0
    ],
    [
-    78.0,
-    36.0
+    26.0,
+    18.0
    ]
   ],
   "id": 259,
@@ -13667,7 +13023,7 @@
    1,
    0
   ],
-  "optimal_cost": 136.0,
+  "optimal_cost": 55.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -13690,36 +13046,33 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    105.0,
-    76.0,
+    35.0,
+    38.0,
     25.0
    ],
    [
-    69.0,
-    52.0,
+    23.0,
+    26.0,
     15.0
    ],
    [
-    99.0,
-    72.0,
+    33.0,
+    36.0,
     23.0
    ]
   ],
@@ -13729,7 +13082,7 @@
    0,
    1
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 84.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13752,48 +13105,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
     19.0,
-    58.0,
-    78.0
+    29.0,
+    26.0
    ],
    [
     13.0,
-    50.0,
-    84.0
+    25.0,
+    28.0
    ],
    [
     21.0,
-    62.0,
-    102.0
+    31.0,
+    34.0
    ]
   ],
   "id": 261,
   "optimal_assignment": [
    2,
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 149.0,
+  "optimal_cost": 70.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -13814,37 +13164,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    28.0,
-    48.0,
-    28.0
+    14.0,
+    24.0,
+    14.0
    ],
    [
-    60.0,
-    80.0,
-    60.0
+    30.0,
+    40.0,
+    30.0
    ],
    [
-    48.0,
-    68.0,
-    48.0
+    24.0,
+    34.0,
+    24.0
    ]
   ],
   "id": 262,
@@ -13853,7 +13200,7 @@
    2,
    1
   ],
-  "optimal_cost": 156.0,
+  "optimal_cost": 78.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13876,37 +13223,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "1",
-    "priority": 2
+    "room": "1"
    }
   ],
   "cost": [
    [
     32.0,
-    76.0,
-    72.0
+    38.0,
+    36.0
    ],
    [
     27.0,
-    66.0,
-    62.0
+    33.0,
+    31.0
    ],
    [
     25.0,
-    50.0,
-    46.0
+    25.0,
+    23.0
    ]
   ],
   "id": 263,
@@ -13915,7 +13259,7 @@
    2,
    1
   ],
-  "optimal_cost": 144.0,
+  "optimal_cost": 88.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -13938,46 +13282,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    111.0,
-    76.0,
-    105.0
+    37.0,
+    38.0,
+    35.0
    ],
    [
-    108.0,
-    74.0,
-    102.0
+    36.0,
+    37.0,
+    34.0
    ],
    [
-    141.0,
-    96.0,
-    135.0
+    47.0,
+    48.0,
+    45.0
    ]
   ],
   "id": 264,
   "optimal_assignment": [
-   0,
    2,
+   0,
    1
   ],
-  "optimal_cost": 309.0,
+  "optimal_cost": 119.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14000,48 +13341,45 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    58.0,
+    29.0,
     23.0,
-    117.0
+    39.0
    ],
    [
-    42.0,
+    21.0,
     17.0,
-    93.0
+    31.0
    ],
    [
-    58.0,
+    29.0,
     23.0,
-    117.0
+    39.0
    ]
   ],
   "id": 265,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 174.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -14062,48 +13400,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
     28.0,
     21.0,
-    50.0
+    25.0
    ],
    [
     33.0,
     26.0,
-    72.0
+    36.0
    ],
    [
     22.0,
     15.0,
-    46.0
+    23.0
    ]
   ],
   "id": 266,
   "optimal_assignment": [
    2,
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 98.0,
+  "optimal_cost": 73.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -14120,24 +13455,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     26.0,
-    64.0
+    32.0
    ],
    [
     22.0,
-    56.0
+    28.0
    ]
   ],
   "id": 267,
@@ -14145,7 +13478,7 @@
    0,
    1
   ],
-  "optimal_cost": 82.0,
+  "optimal_cost": 54.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -14164,23 +13497,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    123.0,
+    41.0,
     29.0
    ],
    [
-    69.0,
+    23.0,
     17.0
    ]
   ],
@@ -14189,8 +13520,8 @@
    1,
    0
   ],
-  "optimal_cost": 98.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 52.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -14208,24 +13539,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
-    75.0,
-    56.0
+    25.0,
+    28.0
    ],
    [
-    129.0,
-    80.0
+    43.0,
+    40.0
    ]
   ],
   "id": 269,
@@ -14233,7 +13562,7 @@
    0,
    1
   ],
-  "optimal_cost": 155.0,
+  "optimal_cost": 65.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -14256,37 +13585,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "3",
-    "priority": 2
+    "room": "3"
    }
   ],
   "cost": [
    [
     26.0,
     29.0,
-    84.0
+    42.0
    ],
    [
     20.0,
     23.0,
-    72.0
+    36.0
    ],
    [
     13.0,
     16.0,
-    50.0
+    25.0
    ]
   ],
   "id": 270,
@@ -14295,9 +13621,9 @@
    1,
    2
   ],
-  "optimal_cost": 99.0,
+  "optimal_cost": 74.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -14318,46 +13644,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    93.0,
+    31.0,
+    19.0,
+    29.0
+   ],
+   [
     38.0,
-    58.0
+    26.0,
+    36.0
    ],
    [
-    114.0,
-    52.0,
-    72.0
-   ],
-   [
-    108.0,
-    48.0,
-    68.0
+    36.0,
+    24.0,
+    34.0
    ]
   ],
   "id": 271,
   "optimal_assignment": [
-   0,
+   1,
    2,
-   1
+   0
   ],
-  "optimal_cost": 213.0,
+  "optimal_cost": 91.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14380,46 +13703,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    }
   ],
   "cost": [
    [
-    135.0,
-    105.0,
+    45.0,
+    35.0,
     29.0
    ],
    [
-    138.0,
-    108.0,
+    46.0,
+    36.0,
     30.0
    ],
    [
-    135.0,
-    105.0,
+    45.0,
+    35.0,
     29.0
    ]
   ],
   "id": 272,
   "optimal_assignment": [
-   1,
    2,
+   1,
    0
   ],
-  "optimal_cost": 270.0,
+  "optimal_cost": 110.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14438,24 +13758,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    50.0,
-    24.0
+    25.0,
+    12.0
    ],
    [
-    62.0,
-    36.0
+    31.0,
+    18.0
    ]
   ],
   "id": 273,
@@ -14463,7 +13781,7 @@
    1,
    0
   ],
-  "optimal_cost": 86.0,
+  "optimal_cost": 43.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -14486,37 +13804,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    105.0,
-    105.0,
-    44.0
+    35.0,
+    35.0,
+    22.0
    ],
    [
-    105.0,
-    105.0,
-    44.0
+    35.0,
+    35.0,
+    22.0
    ],
    [
-    96.0,
-    96.0,
-    38.0
+    32.0,
+    32.0,
+    19.0
    ]
   ],
   "id": 274,
@@ -14525,7 +13840,7 @@
    1,
    0
   ],
-  "optimal_cost": 245.0,
+  "optimal_cost": 89.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14548,37 +13863,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    }
   ],
   "cost": [
    [
-    72.0,
-    72.0,
-    114.0
+    36.0,
+    36.0,
+    38.0
    ],
    [
-    70.0,
-    70.0,
-    111.0
+    35.0,
+    35.0,
+    37.0
    ],
    [
-    68.0,
-    68.0,
-    108.0
+    34.0,
+    34.0,
+    36.0
    ]
   ],
   "id": 275,
@@ -14587,7 +13899,7 @@
    1,
    2
   ],
-  "optimal_cost": 250.0,
+  "optimal_cost": 107.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14610,48 +13922,45 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
-    111.0,
+    37.0,
     31.0,
     24.0
    ],
    [
-    96.0,
+    32.0,
     20.0,
     13.0
    ],
    [
-    147.0,
+    49.0,
     37.0,
     30.0
    ]
   ],
   "id": 276,
   "optimal_assignment": [
-   2,
    0,
-   1
+   1,
+   2
   ],
-  "optimal_cost": 157.0,
+  "optimal_cost": 87.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -14672,37 +13981,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    60.0,
-    69.0,
-    108.0
+    20.0,
+    23.0,
+    36.0
    ],
    [
-    87.0,
-    96.0,
-    135.0
+    29.0,
+    32.0,
+    45.0
    ],
    [
-    99.0,
-    108.0,
-    147.0
+    33.0,
+    36.0,
+    49.0
    ]
   ],
   "id": 277,
@@ -14711,7 +14017,7 @@
    1,
    2
   ],
-  "optimal_cost": 303.0,
+  "optimal_cost": 101.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14734,46 +14040,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    81.0,
-    75.0,
-    30.0
+    27.0,
+    25.0,
+    15.0
    ],
    [
-    108.0,
-    102.0,
-    48.0
+    36.0,
+    34.0,
+    24.0
    ],
    [
-    99.0,
-    93.0,
-    42.0
+    33.0,
+    31.0,
+    21.0
    ]
   ],
   "id": 278,
   "optimal_assignment": [
-   1,
    2,
+   1,
    0
   ],
-  "optimal_cost": 222.0,
+  "optimal_cost": 82.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14796,46 +14099,43 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "6",
-    "priority": 2
+    "room": "6"
    }
   ],
   "cost": [
    [
-    46.0,
-    60.0,
-    54.0
+    23.0,
+    20.0,
+    27.0
    ],
    [
-    54.0,
-    72.0,
-    62.0
+    27.0,
+    24.0,
+    31.0
    ],
    [
-    52.0,
-    69.0,
-    60.0
+    26.0,
+    23.0,
+    30.0
    ]
   ],
   "id": 279,
   "optimal_assignment": [
    1,
-   2,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 174.0,
+  "optimal_cost": 77.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -14854,24 +14154,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
     26.0,
-    46.0
+    23.0
    ],
    [
     21.0,
-    24.0
+    12.0
    ]
   ],
   "id": 280,
@@ -14879,7 +14177,7 @@
    0,
    1
   ],
-  "optimal_cost": 50.0,
+  "optimal_cost": 38.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -14898,23 +14196,21 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "1",
-    "priority": 1
+    "room": "1"
    }
   ],
   "cost": [
    [
-    78.0,
+    26.0,
     24.0
    ],
    [
-    111.0,
+    37.0,
     29.0
    ]
   ],
@@ -14923,8 +14219,8 @@
    0,
    1
   ],
-  "optimal_cost": 107.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 55.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -14942,24 +14238,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
-    26.0,
-    105.0
+    13.0,
+    35.0
    ],
    [
-    18.0,
-    93.0
+    9.0,
+    31.0
    ]
   ],
   "id": 282,
@@ -14967,8 +14261,8 @@
    0,
    1
   ],
-  "optimal_cost": 119.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 44.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -14986,24 +14280,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    }
   ],
   "cost": [
    [
     28.0,
-    96.0
+    32.0
    ],
    [
     36.0,
-    144.0
+    48.0
    ]
   ],
   "id": 283,
@@ -15011,8 +14303,8 @@
    1,
    0
   ],
-  "optimal_cost": 132.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 68.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -15030,24 +14322,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
     30.0,
-    99.0
+    33.0
    ],
    [
     37.0,
-    138.0
+    46.0
    ]
   ],
   "id": 284,
@@ -15055,8 +14345,8 @@
    1,
    0
   ],
-  "optimal_cost": 136.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 70.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -15078,48 +14368,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    }
   ],
   "cost": [
    [
     30.0,
-    96.0,
+    32.0,
     23.0
    ],
    [
     28.0,
-    90.0,
+    30.0,
     21.0
    ],
    [
     30.0,
-    114.0,
+    38.0,
     23.0
    ]
   ],
   "id": 285,
   "optimal_assignment": [
-   2,
    1,
-   0
+   0,
+   2
   ],
-  "optimal_cost": 143.0,
+  "optimal_cost": 83.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -15136,24 +14423,22 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     23.0,
-    58.0
+    29.0
    ],
    [
     25.0,
-    50.0
+    25.0
    ]
   ],
   "id": 286,
@@ -15161,8 +14446,8 @@
    0,
    1
   ],
-  "optimal_cost": 73.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 48.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -15180,24 +14465,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "6",
-    "priority": 3
+    "room": "6"
    }
   ],
   "cost": [
    [
-    120.0,
-    138.0
+    40.0,
+    46.0
    ],
    [
-    93.0,
-    111.0
+    31.0,
+    37.0
    ]
   ],
   "id": 287,
@@ -15205,7 +14488,7 @@
    0,
    1
   ],
-  "optimal_cost": 231.0,
+  "optimal_cost": 77.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -15228,48 +14511,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "6",
-    "priority": 1
+    "room": "6"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     25.0,
     29.0,
-    75.0
+    25.0
    ],
    [
     24.0,
     28.0,
-    90.0
+    30.0
    ],
    [
     26.0,
     30.0,
-    78.0
+    26.0
    ]
   ],
   "id": 288,
   "optimal_assignment": [
    2,
-   1,
-   0
+   0,
+   1
   ],
-  "optimal_cost": 129.0,
+  "optimal_cost": 79.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -15290,37 +14570,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    30.0,
+    15.0,
     24.0,
-    36.0
+    18.0
    ],
    [
-    54.0,
+    27.0,
     30.0,
-    60.0
+    30.0
    ],
    [
-    26.0,
+    13.0,
     16.0,
-    32.0
+    16.0
    ]
   ],
   "id": 289,
@@ -15329,7 +14606,7 @@
    1,
    2
   ],
-  "optimal_cost": 92.0,
+  "optimal_cost": 61.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -15348,33 +14625,31 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    93.0,
-    50.0
+    31.0,
+    25.0
    ],
    [
-    102.0,
-    56.0
+    34.0,
+    28.0
    ]
   ],
   "id": 290,
   "optimal_assignment": [
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 149.0,
-  "best_gamma": 4.1887902047863905,
+  "optimal_cost": 59.0,
+  "best_gamma": 4.45058959258554,
   "best_beta": 2.748893571891069
  },
  {
@@ -15396,35 +14671,32 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    129.0,
+    43.0,
     31.0,
     31.0
    ],
    [
-    93.0,
+    31.0,
     29.0,
     29.0
    ],
    [
-    162.0,
+    54.0,
     42.0,
     42.0
    ]
@@ -15435,9 +14707,9 @@
    0,
    2
   ],
-  "optimal_cost": 166.0,
+  "optimal_cost": 104.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -15458,48 +14730,45 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "5",
-    "priority": 1
+    "room": "5"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    }
   ],
   "cost": [
    [
     21.0,
-    84.0,
-    45.0
+    28.0,
+    15.0
    ],
    [
     25.0,
-    114.0,
-    75.0
+    38.0,
+    25.0
    ],
    [
     18.0,
-    105.0,
-    66.0
+    35.0,
+    22.0
    ]
   ],
   "id": 292,
   "optimal_assignment": [
    2,
-   0,
-   1
+   1,
+   0
   ],
-  "optimal_cost": 175.0,
+  "optimal_cost": 71.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  },
  {
   "bots": [
@@ -15516,24 +14785,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    }
   ],
   "cost": [
    [
-    45.0,
-    66.0
+    15.0,
+    22.0
    ],
    [
-    87.0,
-    108.0
+    29.0,
+    36.0
    ]
   ],
   "id": 293,
@@ -15541,7 +14808,7 @@
    0,
    1
   ],
-  "optimal_cost": 153.0,
+  "optimal_cost": 51.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -15564,37 +14831,34 @@
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "4",
-    "priority": 1
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "2",
-    "priority": 3
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
     29.0,
-    96.0,
-    70.0
+    32.0,
+    35.0
    ],
    [
     18.0,
-    63.0,
-    48.0
+    21.0,
+    24.0
    ],
    [
     27.0,
-    72.0,
-    54.0
+    24.0,
+    27.0
    ]
   ],
   "id": 294,
@@ -15603,7 +14867,7 @@
    1,
    2
   ],
-  "optimal_cost": 146.0,
+  "optimal_cost": 77.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -15626,37 +14890,34 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    64.0,
-    52.0,
-    52.0
-   ],
-   [
-    50.0,
-    38.0,
-    38.0
-   ],
-   [
-    38.0,
+    32.0,
     26.0,
     26.0
+   ],
+   [
+    25.0,
+    19.0,
+    19.0
+   ],
+   [
+    19.0,
+    13.0,
+    13.0
    ]
   ],
   "id": 295,
@@ -15665,7 +14926,7 @@
    2,
    0
   ],
-  "optimal_cost": 128.0,
+  "optimal_cost": 64.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -15684,24 +14945,22 @@
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "2",
-    "priority": 2
+    "room": "2"
    }
   ],
   "cost": [
    [
-    64.0,
-    46.0
+    32.0,
+    23.0
    ],
    [
-    68.0,
-    50.0
+    34.0,
+    25.0
    ]
   ],
   "id": 296,
@@ -15709,7 +14968,7 @@
    1,
    0
   ],
-  "optimal_cost": 114.0,
+  "optimal_cost": 57.0,
   "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
@@ -15728,24 +14987,22 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "1",
-    "priority": 3
+    "room": "1"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "4",
-    "priority": 2
+    "room": "4"
    }
   ],
   "cost": [
    [
-    126.0,
-    64.0
+    42.0,
+    32.0
    ],
    [
-    72.0,
-    28.0
+    24.0,
+    14.0
    ]
   ],
   "id": 297,
@@ -15753,8 +15010,8 @@
    1,
    0
   ],
-  "optimal_cost": 136.0,
-  "best_gamma": 3.926990816987241,
+  "optimal_cost": 56.0,
+  "best_gamma": 4.1887902047863905,
   "best_beta": 2.748893571891069
  },
  {
@@ -15776,46 +15033,43 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "4",
-    "priority": 3
+    "room": "4"
    },
    {
     "item": "coffee",
     "counter": "A",
-    "room": "3",
-    "priority": 3
+    "room": "3"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "3",
-    "priority": 1
+    "room": "3"
    }
   ],
   "cost": [
    [
-    60.0,
-    99.0,
+    20.0,
+    33.0,
     25.0
    ],
    [
-    72.0,
-    111.0,
+    24.0,
+    37.0,
     31.0
    ],
    [
-    45.0,
-    84.0,
+    15.0,
+    28.0,
     26.0
    ]
   ],
   "id": 298,
   "optimal_assignment": [
-   0,
    2,
+   0,
    1
   ],
-  "optimal_cost": 175.0,
+  "optimal_cost": 77.0,
   "best_gamma": 6.021385919380436,
   "best_beta": 2.617993877991494
  },
@@ -15838,37 +15092,34 @@
    {
     "item": "coffee",
     "counter": "A",
-    "room": "5",
-    "priority": 3
+    "room": "5"
    },
    {
     "item": "bubble tea",
     "counter": "C",
-    "room": "2",
-    "priority": 1
+    "room": "2"
    },
    {
     "item": "pizza",
     "counter": "B",
-    "room": "5",
-    "priority": 2
+    "room": "5"
    }
   ],
   "cost": [
    [
-    81.0,
+    27.0,
     16.0,
-    42.0
+    21.0
    ],
    [
-    75.0,
+    25.0,
     12.0,
-    38.0
+    19.0
    ],
    [
-    96.0,
+    32.0,
     17.0,
-    52.0
+    26.0
    ]
   ],
   "id": 299,
@@ -15877,8 +15128,8 @@
    0,
    1
   ],
-  "optimal_cost": 134.0,
+  "optimal_cost": 63.0,
   "best_gamma": 6.021385919380436,
-  "best_beta": 2.748893571891069
+  "best_beta": 2.617993877991494
  }
 ]

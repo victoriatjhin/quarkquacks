@@ -24,11 +24,7 @@ CAMPUS = [
 ]
 
 COUNTERS = {"A": "coffee", "B": "pizza", "C": "bubble tea"}
-ITEMS = {
-    "coffee": {"counter": "A", "priority": 3},      # hot drink: deliver fast
-    "pizza": {"counter": "B", "priority": 2},       # hot food
-    "bubble tea": {"counter": "C", "priority": 1},  # can wait a little
-}
+ITEMS = {item: {"counter": counter} for counter, item in COUNTERS.items()}
 
 
 def find_cells(grid=CAMPUS):
@@ -67,18 +63,18 @@ class Campus:
         self.dist_from = {self.named[k]: bfs_distances(self.named[k], grid) for k in COUNTERS}
 
     def make_scenario(self, n, rng=None):
-        """n bots and n orders. Cost = priority x (bot -> counter -> room)."""
+        """n geese and n orders. Cost = walking distance (goose -> counter -> room)."""
         rng = rng or random.Random()
         bots = rng.sample(self.floor, n)
         orders = []
         for _ in range(n):
             item = rng.choice(list(ITEMS))
             orders.append({"item": item, "counter": ITEMS[item]["counter"],
-                           "room": rng.choice(self.rooms), "priority": ITEMS[item]["priority"]})
+                           "room": rng.choice(self.rooms)})
         cost = np.zeros((n, n))
         for b, bot in enumerate(bots):
             for o, order in enumerate(orders):
                 pickup = self.named[order["counter"]]
                 d = self.dist_from[pickup]
-                cost[b, o] = order["priority"] * (d[bot] + d[self.named[order["room"]]])
+                cost[b, o] = d[bot] + d[self.named[order["room"]]]
         return {"bots": bots, "orders": orders, "cost": cost.tolist()}
