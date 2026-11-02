@@ -1,6 +1,10 @@
 # QuarkQuacks 🪿
 
-Robot geese deliver food and drinks from the food court to study rooms. QuarkQuacks uses a quantum algorithm (QAOA) to decide which goose delivers which order, and machine learning to help it find the answer faster.
+Robot geese that deliver food and drinks across campus, routed by a quantum algorithm.
+
+## What it does
+
+QuarkQuacks decides which robot goose delivers which order from the food court to study rooms. It solves the problem with QAOA, a quantum optimization algorithm, and uses machine learning to help QAOA find the answer faster.
 
 ## How it works
 
@@ -9,7 +13,11 @@ Robot geese deliver food and drinks from the food court to study rooms. QuarkQua
 3. Solve it with QAOA in Qiskit, using ML to predict good starting settings.
 4. Compare the result with a classical solver.
 
-## Structure
+## Tech stack
+
+Python, Qiskit, Qiskit Optimization, Qiskit Aer, scikit-learn, NumPy, SciPy, Matplotlib
+
+## Project structure
 
 | Folder | Contents |
 | --- | --- |
