@@ -25,7 +25,15 @@ cd quarkquacks
 pip install -r requirements.txt
 ```
 
-Run commands will be added as the code is built.
+Then:
+
+```bash
+python run_pipeline.py --geese 3       # full pipeline on one scenario, saves a plan plot
+python scripts/generate_data.py        # regenerate training data (about 30 s)
+python -m ml.model                     # train the warm-start model
+python -m ml.warmstart                 # compare random vs. warm-start QAOA
+pytest                                 # run tests
+```
 
 ## Demo
 
