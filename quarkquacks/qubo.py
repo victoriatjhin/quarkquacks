@@ -39,9 +39,15 @@ def build_qubo(cost, penalty=PENALTY):
 def qubo_cost_vector(qubo):
     """QUBO value of every bitstring. Bit k of the index = variable k = qubit k."""
     nq = qubo.get_num_vars()
+    obj = qubo.objective
+    linear = obj.linear.to_array()
+    quad = obj.quadratic.to_array()
     out = np.empty(2 ** nq)
-    for z in range(2 ** nq):
-        out[z] = qubo.objective.evaluate([(z >> k) & 1 for k in range(nq)])
+    chunk = 1 << 16  # keeps memory small at 16+ qubits
+    for start in range(0, 2 ** nq, chunk):
+        idx = np.arange(start, min(start + chunk, 2 ** nq))
+        x = ((idx[:, None] >> np.arange(nq)) & 1).astype(float)
+        out[idx] = obj.constant + x @ linear + np.einsum("bi,ij,bj->b", x, quad, x)
     return out
 
 

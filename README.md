@@ -32,6 +32,8 @@ python run_pipeline.py --geese 3       # full pipeline on one scenario, saves a 
 python scripts/generate_data.py        # regenerate training data (about 30 s)
 python -m ml.model                     # train the warm-start model
 python -m ml.warmstart                 # compare random vs. warm-start QAOA
+python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 min)
+python scripts/plot_scaling.py         # draw figures/scaling.png
 pytest                                 # run tests
 ```
 
