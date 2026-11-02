@@ -4,8 +4,6 @@
 
 Robot geese deliver coffee, pizza and bubble tea from the food court to study rooms. QuarkQuacks assigns geese to orders by turning the problem into a QUBO and solving it with QAOA in Qiskit. An ML model predicts good QAOA starting angles, so the solver reaches a good plan in fewer steps.
 
-Built for Qiskit Fall Fest 2026 at the University of Waterloo. Prompt: bridge a non-quantum problem to a quantum algorithm.
-
 ## How it works
 
 ```
@@ -33,15 +31,3 @@ Campus map + orders → travel costs → QUBO → QAOA (Qiskit) → assignments
 | `demo/` | Goose animation |
 | `data/`, `figures/` | Scenarios, results, charts |
 | `tests/` | Unit tests |
-
-## Setup
-
-```bash
-pip install -r requirements.txt
-```
-
-## Team
-
-- *Name*: simulator and demo
-- *Name*: quantum solver
-- *Name*: ML and benchmarks
