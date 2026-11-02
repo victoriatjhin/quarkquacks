@@ -20,21 +20,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from quarkquacks import Campus, normalized_cost_vector, solve_classical  # noqa: E402
 from quarkquacks.qaoa_sim import grid_search, qaoa_p1_probs  # noqa: E402
 from quarkquacks.qubo import assignment_to_index  # noqa: E402
-
-
-def features(scn):
-    """The numbers the ML model sees for one scenario."""
-    cost = np.array(scn["cost"])
-    pri = [o["priority"] for o in scn["orders"]]
-    return {
-        "n": len(cost),
-        "cost_mean": round(float(cost.mean()), 3),
-        "cost_std": round(float(cost.std()), 3),
-        "cost_min": float(cost.min()),
-        "cost_max": float(cost.max()),
-        "priority_mean": round(float(np.mean(pri)), 3),
-        "spread": round(float((cost.mean(axis=0) - cost.min(axis=0)).mean()), 3),
-    }
+from quarkquacks.features import scenario_features as features  # noqa: E402
 
 
 def main():
