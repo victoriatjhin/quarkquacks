@@ -17,6 +17,20 @@ QuarkQuacks decides which robot goose delivers which order from the food court t
 
 Python, Qiskit, Qiskit Optimization, Qiskit Aer, scikit-learn, NumPy, SciPy, Matplotlib
 
+## How to run
+
+```bash
+git clone https://github.com/victoriatjhin/quarkquacks.git
+cd quarkquacks
+pip install -r requirements.txt
+```
+
+Run commands will be added as the code is built.
+
+## Demo
+
+Goose delivery animation and results charts coming soon.
+
 ## Project structure
 
 | Folder | Contents |
