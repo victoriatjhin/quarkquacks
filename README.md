@@ -1,29 +1,21 @@
 # QuarkQuacks 🪿
 
-**Quantum-assigned goose delivery bots for campus.**
-
-Robot geese deliver coffee, pizza and bubble tea from the food court to study rooms. QuarkQuacks assigns geese to orders by turning the problem into a QUBO and solving it with QAOA in Qiskit. An ML model predicts good QAOA starting angles, so the solver reaches a good plan in fewer steps.
+Robot geese deliver food and drinks from the food court to study rooms. QuarkQuacks uses a quantum algorithm (QAOA) to decide which goose delivers which order, and machine learning to help it find the answer faster.
 
 ## How it works
 
-```
-Campus map + orders → travel costs → QUBO → QAOA (Qiskit) → assignments
-                                              ↑
-                                  ML-predicted starting angles
-```
-
-1. **Simulate:** random geese and orders on a campus grid; hot items get higher priority.
-2. **Bridge:** convert the goose-to-order assignment into a QUBO with `qiskit-optimization`.
-3. **Solve:** run QAOA on the Qiskit Aer simulator, warm-started by the ML model.
-4. **Compare:** check against an exact classical solver.
+1. Generate geese and orders on a campus map.
+2. Turn "which goose gets which order" into a QUBO, a problem format quantum computers can solve.
+3. Solve it with QAOA in Qiskit, using ML to predict good starting settings.
+4. Compare the result with a classical solver.
 
 ## Structure
 
 | Folder | Contents |
 | --- | --- |
-| `quarkquacks/` | Simulator, QUBO builder, classical baseline |
+| `quarkquacks/` | Campus map, QUBO builder, classical solver |
 | `quantum/` | QAOA solver |
-| `ml/` | Warm-start model |
+| `ml/` | ML model |
 | `demo/` | Goose animation |
-| `data/`, `figures/` | Scenarios, results, charts |
-| `tests/` | Unit tests |
+| `data/`, `figures/` | Data, results, charts |
+| `tests/` | Tests |
