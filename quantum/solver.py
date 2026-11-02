@@ -2,14 +2,15 @@
 
 Starter version for Person B to extend.
 
-
-solve_qaoa(cost, initial_point=None) runs QAOA on the Aer simulator and returns
-the decoded assignment. Pass initial_point=[gamma, beta] from the ML model to
+solve_qaoa(cost, warm_start=None) runs p=1 QAOA and returns the decoded
+assignment. Pass warm_start=(gamma, beta) from ml.model.predict_angles to
 warm-start, or leave it None for a random start.
 
-Note on angle conventions: Qiskit's QAOA orders parameters as [beta, gamma] and
-may scale the cost differently from quarkquacks/qaoa_sim.py. Check that the
-predicted angles help before relying on them (see TODO below).
+Angle convention (verified to match quarkquacks/qaoa_sim.py exactly):
+- Qiskit orders QAOA parameters as [beta, gamma].
+- The ML model's gamma is for costs scaled to max |value| = 1, while Qiskit uses
+  the unscaled Ising operator, so Qiskit's gamma = model gamma / scale.
+to_qiskit_angles() does both conversions.
 """
 
 import numpy as np
@@ -18,41 +19,46 @@ from qiskit_algorithms import QAOA
 from qiskit_algorithms.optimizers import COBYLA
 from qiskit_optimization.algorithms import MinimumEigenOptimizer
 
-from quarkquacks.qubo import bits_to_assignment, build_quadratic_program, PENALTY
-from qiskit_optimization.converters import QuadraticProgramToQubo
+from quarkquacks.qubo import bits_to_assignment, build_qubo, qubo_cost_vector
 
 
-def solve_qaoa(cost, initial_point=None, reps=1, maxiter=100, seed=0):
-    """Return dict with assignment {bot: order}, scaled objective and optimizer evaluations."""
+def to_qiskit_angles(qubo, gamma, beta):
+    """Convert model angles (gamma, beta) to Qiskit's QAOA parameter list [beta, gamma / scale]."""
+    scale = float(np.abs(qubo_cost_vector(qubo)).max())
+    return [beta, gamma / scale]
+
+
+def solve_qaoa(cost, warm_start=None, maxiter=100, seed=0):
+    """Return {"assignment": {goose: order} or None, "objective", "evaluations"}."""
     n = len(cost)
-    qubo = QuadraticProgramToQubo(penalty=PENALTY).convert(build_quadratic_program(cost))
+    qubo = build_qubo(cost)
+
+    if warm_start is None:
+        initial_point = np.random.default_rng(seed).uniform(0, np.pi, 2)
+    else:
+        initial_point = to_qiskit_angles(qubo, *warm_start)
 
     evals = []
-    rng = np.random.default_rng(seed)
-    if initial_point is None:
-        initial_point = rng.uniform(0, np.pi, 2 * reps)
-    else:
-        gamma, beta = initial_point
-        initial_point = [beta, gamma]          # Qiskit order: [beta, gamma]
-
     qaoa = QAOA(
         sampler=StatevectorSampler(seed=seed),
         optimizer=COBYLA(maxiter=maxiter),
-        reps=reps,
+        reps=1,
         initial_point=initial_point,
         callback=lambda count, params, value, meta: evals.append(value),
     )
     result = MinimumEigenOptimizer(qaoa).solve(qubo)
-    assignment = bits_to_assignment(result.x[: n * n], n)
-    # TODO (B): compare evaluations with random vs. ML-predicted starting angles
-    # on the test scenarios, and confirm the angle convention matches qaoa_sim.py.
-    return {"assignment": assignment, "objective": float(result.fval), "evaluations": len(evals)}
+    return {"assignment": bits_to_assignment(result.x[: n * n], n),
+            "objective": float(result.fval),
+            "evaluations": len(evals)}
 
 
 if __name__ == "__main__":
     import random
+
+    from ml.model import predict_angles
     from quarkquacks import Campus, solve_classical
 
-    scn = Campus().make_scenario(2, random.Random(0))
-    print("QAOA:     ", solve_qaoa(scn["cost"]))
-    print("Classical:", solve_classical(scn["cost"]))
+    scn = Campus().make_scenario(3, random.Random(0))
+    print("QAOA, random start:", solve_qaoa(scn["cost"]))
+    print("QAOA, warm start:  ", solve_qaoa(scn["cost"], warm_start=predict_angles(scn)))
+    print("Classical:         ", solve_classical(scn["cost"]))
