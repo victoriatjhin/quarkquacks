@@ -36,6 +36,7 @@ python -m ml.warmstart                 # compare random vs. warm-start QAOA
 python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 min)
 python scripts/plot_scaling.py         # draw figures/scaling.png
 python demo/animate.py --geese 3       # collision-free delivery animation, figures/demo.gif
+python scripts/gpu_benchmark.py        # CPU vs. GPU QAOA timing at 4-25 qubits (needs qiskit-aer-gpu for GPU)
 pytest                                 # run tests
 ```
 
