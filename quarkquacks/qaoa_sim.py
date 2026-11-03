@@ -5,6 +5,7 @@ lives in quantum/solver.py; both use the same cost normalisation.
 """
 
 import numpy as np
+from scipy.optimize import minimize
 
 
 def qaoa_p1_probs(C, gamma, beta):
@@ -34,3 +35,15 @@ def grid_search(C, steps=24):
             if e < best[0]:
                 best = (e, g, b)
     return best
+
+
+def refine(C, gamma, beta, tol=1e-4):
+    """Polish grid-search angles with a short local search.
+
+    The grid only covers gamma in [0, 2*pi); on larger problems the best gamma
+    can lie outside it or between grid points, so the grid answer alone makes a
+    poor training label. Returns (energy, gamma, beta).
+    """
+    res = minimize(lambda x: energy(C, x[0], x[1]), [gamma, beta], method="COBYLA",
+                   options={"maxiter": 400, "tol": tol, "rhobeg": 0.3})
+    return float(res.fun), float(res.x[0]), float(res.x[1])
