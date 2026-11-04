@@ -28,8 +28,10 @@ pip install -r requirements.txt
 Then:
 
 ```bash
-python run_pipeline.py --geese 3       # full pipeline on one scenario, saves a plan plot
-python run_pipeline.py --geese 3 --bundle   # same, with nearby orders pre-bundled into one trip
+python run_pipeline.py                 # full pipeline, 4 geese: ML -> QAOA -> classical check -> collision-free delivery
+python run_pipeline.py --bundle        # same, with nearby orders pre-bundled into one trip
+python run_pipeline.py --carpool       # carpool mode: QAOA decides which orders share a goose (2 geese, 4 orders)
+python run_pipeline.py --gif figures/run.gif   # any mode: also save the delivery animation
 python scripts/generate_data.py        # training data for 2-3 geese (about 30 s)
 python scripts/generate_data.py --append --sizes 4 --n 150 --seed 4242   # add 4-goose data (about 12 min)
 python -m ml.model                     # train the warm-start model
@@ -37,11 +39,13 @@ python -m ml.warmstart                 # compare random vs. warm-start QAOA
 python scripts/plot_warmstart.py       # draw figures/warmstart.png
 python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 min)
 python scripts/plot_scaling.py         # draw figures/scaling.png
-python demo/animate.py --geese 3       # collision-free delivery animation, figures/demo.gif
-python demo/animate.py --geese 3 --bundle --out figures/demo_bundle.gif   # with pre-bundling
+python demo/animate.py                 # collision-free delivery animation (4 geese), figures/demo.gif
+python demo/animate.py --bundle --out figures/demo_bundle.gif   # with pre-bundling
 python demo/plot_map.py                # labelled campus map, figures/campus_map.png
 python scripts/gpu_benchmark.py        # CPU vs. GPU QAOA timing at 4-25 qubits (needs qiskit-aer-gpu for GPU)
-pytest                                 # all tests incl. integration (about 10 s)
+python scripts/carpool_eval.py         # carpool mode: QAOA vs. random guessing (about 1 min)
+python scripts/qiskit_eval.py          # real Qiskit QAOA at 4 geese: warm vs. random start (about 10 min)
+pytest                                 # all tests incl. end-to-end integration (about 1 min)
 pytest -m "not integration"            # skip the end-to-end checks
 ```
 
@@ -73,13 +77,15 @@ An ML model trained on 360 simulated scenarios predicts QAOA's starting angles, 
 
 **Pre-bundling:** the warm start transfers to bundled scenarios without retraining (68% / 88% / 93% fewer optimizer steps at 2 / 3 / 4 geese).
 
-**Carpool mode** (branch `feature/carpool`): QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
+**Carpool mode:** QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
+
+![Carpool mode: QAOA vs. random guessing](figures/carpool.png)
 
 ## Project structure
 
 | Folder | Contents |
 | --- | --- |
-| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes |
+| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes, carpool mode |
 | `quantum/` | QAOA solver |
 | `ml/` | ML model |
 | `demo/` | Campus map, goose drawings, delivery animations |

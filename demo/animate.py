@@ -1,7 +1,7 @@
 """Animated demo: geese deliver orders on collision-free routes around bystanders.
 
-    python demo/animate.py --geese 3                 ->  figures/demo.gif
-    python demo/animate.py --geese 3 --bundle --out figures/demo_bundle.gif
+    python demo/animate.py                           ->  figures/demo.gif (4 geese)
+    python demo/animate.py --bundle --out figures/demo_bundle.gif
 
 With no --seed, it picks a scenario where at least one goose waits for another
 goose and for a person (and, with --bundle, one goose carries two orders), so
@@ -53,19 +53,9 @@ def describe(order):
     return f"{what} → room{'s' if len(rooms) > 1 else ''} {', '.join(rooms)}"
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--geese", type=int, default=3, choices=[2, 3, 4])
-    ap.add_argument("--seed", type=int, default=None)
-    ap.add_argument("--bundle", action="store_true", help="pre-bundle nearby orders into one trip")
-    ap.add_argument("--out", default="figures/demo.gif")
-    args = ap.parse_args()
-
-    seed = pick_seed(args.geese, args.bundle) if args.seed is None else args.seed
-    campus, scn, assignment, frames, stats = run(args.geese, seed, args.bundle)
-
+def render_gif(campus, frames, legend, out, n_trips):
+    """Save an animation of simulated frames (from quarkquacks.routes.simulate)."""
     fig, ax = plt.subplots(figsize=(8, 5.6))
-    legend = "   ".join(f"G{g}: {describe(scn['orders'][o])}" for g, o in sorted(assignment.items()))
 
     def draw(i):
         ax.clear()
@@ -79,15 +69,29 @@ def main():
                 draw_goose(ax, c, r, GOOSE_COLORS[g % len(GOOSE_COLORS)], label=f"G{g}",
                            waiting=g in frame["waiting"])
         delivered = sum(cell is None for cell in frame["geese"].values())
-        ax.set_title(f"t = {frame['t']}  ·  trips delivered {delivered}/{len(assignment)}",
+        ax.set_title(f"t = {frame['t']}  ·  trips delivered {delivered}/{n_trips}",
                      fontsize=10, loc="left", color=INK)
         ax.text(0, -0.04, legend, transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
         fig.tight_layout()
 
     anim = FuncAnimation(fig, draw, frames=len(frames), interval=180)
-    os.makedirs(os.path.dirname(args.out), exist_ok=True)
-    anim.save(args.out, writer=PillowWriter(fps=6))
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+    anim.save(out, writer=PillowWriter(fps=6))
     plt.close(fig)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--geese", type=int, default=4, choices=[2, 3, 4])
+    ap.add_argument("--seed", type=int, default=None)
+    ap.add_argument("--bundle", action="store_true", help="pre-bundle nearby orders into one trip")
+    ap.add_argument("--out", default="figures/demo.gif")
+    args = ap.parse_args()
+
+    seed = pick_seed(args.geese, args.bundle) if args.seed is None else args.seed
+    campus, scn, assignment, frames, stats = run(args.geese, seed, args.bundle)
+    legend = "   ".join(f"G{g}: {describe(scn['orders'][o])}" for g, o in sorted(assignment.items()))
+    render_gif(campus, frames, legend, args.out, len(assignment))
     print(f"Saved {args.out} (seed {seed}, {len(frames)} frames, "
           f"{stats['waits_for_goose']} waits for geese, {stats['waits_for_person']} for people)")
 
