@@ -15,7 +15,7 @@ QuarkQuacks decides which robot goose delivers which order from the food court t
 
 ## Tech stack
 
-Python, Qiskit, Qiskit Optimization, Qiskit Aer, scikit-learn, NumPy, SciPy, Matplotlib
+Python, Qiskit, Qiskit Optimization, Qiskit Algorithms, Qiskit Aer, scikit-learn, pandas, NumPy, SciPy, Matplotlib, pytest
 
 ## How to run
 
@@ -33,6 +33,7 @@ python scripts/generate_data.py        # training data for 2-3 geese (about 30 s
 python scripts/generate_data.py --append --sizes 4 --n 150 --seed 4242   # add 4-goose data (about 12 min)
 python -m ml.model                     # train the warm-start model
 python -m ml.warmstart                 # compare random vs. warm-start QAOA
+python scripts/plot_warmstart.py       # draw figures/warmstart.png
 python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 min)
 python scripts/plot_scaling.py         # draw figures/scaling.png
 python demo/animate.py --geese 3       # collision-free delivery animation, figures/demo.gif
@@ -47,7 +48,21 @@ pytest -m "not integration"            # quick tests only (a few seconds)
 
 Geese plan routes in first-come-first-served order, never share or swap cells, and wait for or step around people they sense within 2 cells.
 
+## Results
+
+An ML model trained on 360 simulated scenarios predicts QAOA's starting angles, cutting the optimizer's work by 71–91% on 90 scenarios it never saw, with equal or better plans. Every QAOA plan is checked against an exact classical solver, and the routing layer delivered every order with zero collisions across 1,000 simulated runs. At this size the classical solver is exact and near-instant, so we don't claim a quantum advantage; the project shows a verifiable bridge from a real problem to QAOA and a way to make QAOA much cheaper to run.
+
+| Geese (qubits) | Optimizer steps, random start | Optimizer steps, ML warm start | Reduction |
+| --- | --- | --- | --- |
+| 2 (4) | 49 | 14 | 71% |
+| 3 (9) | 117 | 14 | 88% |
+| 4 (16) | 189 | 16 | 91% |
+
+![ML warm start results](figures/warmstart.png)
+
 ![Scaling from 2 to 4 geese](figures/scaling.png)
+
+**Carpool mode** (branch `feature/carpool`): QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
 
 ## Project structure
 
