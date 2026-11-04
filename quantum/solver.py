@@ -57,12 +57,26 @@ def solve_qaoa(cost, warm_start=None, maxiter=100, seed=0):
 
 
 if __name__ == "__main__":
+    from scipy.optimize import linear_sum_assignment
+
+    cost = np.array([[2, 9, 7],
+                     [8, 1, 6],
+                     [5, 9, 3]], dtype=float)
+
+    r, c = linear_sum_assignment(cost)
+    print("Exact:", dict(zip(r.tolist(), c.tolist())), "cost", cost[r, c].sum())
+    print("QAOA, random start:", solve_qaoa(cost))
+    print("QAOA, start (0.5, 0.5):", solve_qaoa(cost, warm_start=(0.5, 0.5)))
+
+    # The following code is commented out because the packages/code have not been created yet
+    """
     import random
 
-    from ml.model import predict_angles
-    from quarkquacks import Campus, solve_classical
+    from ml.model import predict_angles #Vik's pakage, created
+    from quarkquacks import Campus, solve_classical #Mann and Vik's package
 
     scn = Campus().make_scenario(3, random.Random(0))
     print("QAOA, random start:", solve_qaoa(scn["cost"]))
     print("QAOA, warm start:  ", solve_qaoa(scn["cost"], warm_start=predict_angles(scn)))
     print("Classical:         ", solve_classical(scn["cost"]))
+    """

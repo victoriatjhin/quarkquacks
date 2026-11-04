@@ -69,3 +69,5 @@ def assignment_to_index(perm):
     """Bitstring index for an assignment given as a list perm[bot] = order."""
     n = len(perm)
     return sum(1 << (b * n + perm[b]) for b in range(n))
+
+print("Running qubo.py was successful")
