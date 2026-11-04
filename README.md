@@ -41,6 +41,7 @@ python demo/animate.py --geese 3       # collision-free delivery animation, figu
 python demo/animate.py --geese 3 --bundle --out figures/demo_bundle.gif   # with pre-bundling
 python demo/plot_map.py                # labelled campus map, figures/campus_map.png
 python scripts/gpu_benchmark.py        # CPU vs. GPU QAOA timing at 4-25 qubits (needs qiskit-aer-gpu for GPU)
+python scripts/carpool_eval.py         # carpool mode: QAOA vs. random guessing (about 1 min)
 pytest                                 # all tests incl. integration (about 10 s)
 pytest -m "not integration"            # skip the end-to-end checks
 ```
@@ -73,13 +74,15 @@ An ML model trained on 360 simulated scenarios predicts QAOA's starting angles, 
 
 **Pre-bundling:** the warm start transfers to bundled scenarios without retraining (68% / 88% / 93% fewer optimizer steps at 2 / 3 / 4 geese).
 
-**Carpool mode** (branch `feature/carpool`): QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
+**Carpool mode:** QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
+
+![Carpool mode: QAOA vs. random guessing](figures/carpool.png)
 
 ## Project structure
 
 | Folder | Contents |
 | --- | --- |
-| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes |
+| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes, carpool mode |
 | `quantum/` | QAOA solver |
 | `ml/` | ML model |
 | `demo/` | Campus map, goose drawings, delivery animations |
