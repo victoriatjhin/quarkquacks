@@ -102,10 +102,13 @@ def run_assignment(args, campus):
     perm, best_cost = solve_classical(cost)
 
     print(f"\nML predicted angles: gamma={gamma:.3f}, beta={beta:.3f}")
-    print(f"QAOA warm start: cost {total(warm['assignment'])}, {warm['evaluations']} optimizer steps")
+    def shown(assignment):
+        return "invalid plan" if assignment is None else f"cost {total(assignment):.0f}"
+
+    print(f"QAOA warm start: {shown(warm['assignment'])}, {warm['evaluations']} optimizer steps")
     if cold:
-        print(f"QAOA random:     cost {total(cold['assignment'])}, {cold['evaluations']} optimizer steps")
-    print(f"Classical best:  cost {best_cost}")
+        print(f"QAOA random:     {shown(cold['assignment'])}, {cold['evaluations']} optimizer steps")
+    print(f"Classical best:  cost {best_cost:.0f}")
 
     plan = warm["assignment"]
     if plan is None:  # safety gate: never send geese out with an invalid plan

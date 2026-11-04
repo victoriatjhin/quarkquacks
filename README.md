@@ -73,6 +73,8 @@ An ML model trained on 360 simulated scenarios predicts QAOA's starting angles, 
 
 ![ML warm start results](figures/warmstart.png)
 
+**In real Qiskit QAOA** (20 fresh 4-goose scenarios, 16 qubits): the warm start found the best plan 85% of the time vs. 60% for a random start, and always returned a valid plan (random: 75%). Step counts were similar (28 vs. 30), so in Qiskit the gain is reliability; the step savings above come from the fast simulation used for training.
+
 ![Scaling from 2 to 4 geese](figures/scaling.png)
 
 **Pre-bundling:** the warm start transfers to bundled scenarios without retraining (68% / 88% / 93% fewer optimizer steps at 2 / 3 / 4 geese).
