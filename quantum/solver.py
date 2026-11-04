@@ -51,8 +51,20 @@ def solve_qaoa(cost, warm_start=None, maxiter=100, seed=0):
         transpiler=compiler,
     )
     result = MinimumEigenOptimizer(qaoa).solve(qubo)
-    return {"assignment": bits_to_assignment(result.x[: n * n], n),
-            "objective": float(result.fval),
+    assignment = bits_to_assignment(result.x[: n * n], n)
+    real_cost = None if assignment is None else float(
+        sum(cost[b, o] for b, o in assignment.items()))
+
+    # the exact best plan, from the classical solver
+    rows, cols = linear_sum_assignment(cost)
+    optimal = {int(r): int(c) for r, c in zip(rows, cols)}
+
+    # share of all samples that landed on exactly that plan
+    p_optimal = sum(s.probability for s in result.samples
+                    if bits_to_assignment(s.x[: n * n], n) == optimal)
+    return {"assignment": assignment,
+            "cost": real_cost,
+            "p_optimal": p_optimal,
             "evaluations": len(evals)}
 
 
