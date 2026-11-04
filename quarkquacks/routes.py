@@ -99,11 +99,12 @@ def static_path(grid, start, waypoints, blocked=frozenset()):
 
 
 def goose_waypoints(campus, scenario, assignment):
-    """{goose: [counter cell, room cell]} for each assigned order."""
+    """{goose: [counter cell, room cell(s)]} for each assigned order or bundle."""
     out = {}
     for goose, order_idx in assignment.items():
         order = scenario["orders"][order_idx]
-        out[goose] = [campus.named[order["counter"]], campus.named[order["room"]]]
+        rooms = order.get("rooms", [order["room"]])
+        out[goose] = [campus.named[order["counter"]]] + [campus.named[r] for r in rooms]
     return out
 
 
