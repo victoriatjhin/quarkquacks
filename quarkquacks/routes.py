@@ -107,9 +107,14 @@ def goose_waypoints(campus, scenario, assignment):
     return out
 
 
-def plan_routes(campus, scenario, assignment):
-    """Prioritized planning. Returns {goose: path} and the planning order."""
-    waypoints = goose_waypoints(campus, scenario, assignment)
+def plan_routes(campus, scenario, assignment, waypoints=None):
+    """Prioritized planning. Returns {goose: path} and the planning order.
+
+    `waypoints` ({goose: [cells]}) overrides the default counter -> room trip,
+    e.g. for carpool trips with several stops. `assignment` then maps each goose
+    to the index of its earliest order, which sets first-come-first-served priority.
+    """
+    waypoints = waypoints or goose_waypoints(campus, scenario, assignment)
     order = sorted(assignment, key=lambda g: assignment[g])  # first-come, first-served
     reserved, reserved_moves, paths = set(), set(), {}
     for goose in order:
@@ -132,7 +137,8 @@ def _near(a, b, radius):
     return abs(a[0] - b[0]) + abs(a[1] - b[1]) <= radius
 
 
-def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TICKS):
+def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TICKS,
+             waypoints=None):
     """Run the delivery tick by tick. Returns frames and stats.
 
     Each frame: {"t", "geese": {goose: cell or None once delivered},
@@ -140,8 +146,8 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
     """
     rng = random.Random(seed)
     grid = campus.grid
-    paths, order = plan_routes(campus, scenario, assignment)
-    waypoints = goose_waypoints(campus, scenario, assignment)
+    paths, order = plan_routes(campus, scenario, assignment, waypoints)
+    waypoints = waypoints or goose_waypoints(campus, scenario, assignment)
     pos = {g: tuple(scenario["bots"][g]) for g in order}
     remaining = {g: list(paths[g]) for g in order}
     next_wp = {g: 0 for g in order}

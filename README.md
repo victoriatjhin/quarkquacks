@@ -37,6 +37,7 @@ python scripts/scaling.py              # scaling study at 2-4 geese (about 1.5 m
 python scripts/plot_scaling.py         # draw figures/scaling.png
 python demo/animate.py --geese 3       # collision-free delivery animation, figures/demo.gif
 python scripts/gpu_benchmark.py        # CPU vs. GPU QAOA timing at 4-25 qubits (needs qiskit-aer-gpu for GPU)
+python scripts/carpool_eval.py         # carpool mode: QAOA vs. random guessing (about 1 min)
 pytest                                 # all tests incl. integration (about 1.5 min)
 pytest -m "not integration"            # quick tests only (a few seconds)
 ```
@@ -53,7 +54,7 @@ Geese plan routes in first-come-first-served order, never share or swap cells, a
 
 | Folder | Contents |
 | --- | --- |
-| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes |
+| `quarkquacks/` | Campus map, QUBO builder, classical solver, collision-free routes, carpool mode |
 | `quantum/` | QAOA solver |
 | `ml/` | ML model |
 | `demo/` | Goose animation |
