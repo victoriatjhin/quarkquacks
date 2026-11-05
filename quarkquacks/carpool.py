@@ -63,7 +63,8 @@ def make_carpool_scenario(campus, n_geese, n_orders, rng=None):
 def best_trip(campus, dist, start, orders):
     """Fastest stop order for one goose carrying `orders` (pickups before drop-offs).
 
-    Returns (total customer wait, stops as cells, wait per order).
+    Returns (total customer wait, stops as cells, wait per order,
+    stops as (kind, order position, cell) tuples).
     """
     stops = []
     for k, o in enumerate(orders):
@@ -87,7 +88,7 @@ def best_trip(campus, dist, start, orders):
                 waits[k] = t
         total = sum(waits.values())
         if best is None or total < best[0]:
-            best = (total, [cell for _, _, cell in seq], waits)
+            best = (total, [cell for _, _, cell in seq], waits, list(seq))
     return best
 
 
@@ -210,6 +211,17 @@ class CarpoolProblem:
             if orders:
                 ords = [self.scenario["orders"][o] for o in sorted(orders)]
                 out[g] = best_trip(self.campus, self._dist, self._bots[g], ords)[1]
+        return out
+
+    def drop_stops(self, plan):
+        """{goose: [(order index, waypoint index of its drop-off)]}, matching waypoints()."""
+        out = {}
+        for g, orders in plan.items():
+            if orders:
+                ids = sorted(orders)
+                seq = best_trip(self.campus, self._dist, self._bots[g],
+                                [self.scenario["orders"][o] for o in ids])[3]
+                out[g] = [(ids[k], i) for i, (kind, k, _) in enumerate(seq) if kind == "drop"]
         return out
 
 

@@ -32,6 +32,7 @@ python run_pipeline.py                 # full pipeline, 4 geese: ML -> QAOA -> c
 python run_pipeline.py --bundle        # same, with nearby orders pre-bundled into one trip
 python run_pipeline.py --carpool       # carpool mode: QAOA decides which orders share a goose (2 geese, 4 orders)
 python run_pipeline.py --gif figures/run.gif   # any mode: also save the delivery animation
+python run_pipeline.py --step-seconds 3        # show each order's wait time in minutes too
 python scripts/generate_data.py        # training data for 2-3 geese (about 30 s)
 python scripts/generate_data.py --append --sizes 4 --n 150 --seed 4242   # add 4-goose data (about 12 min)
 python -m ml.model                     # train the warm-start model
@@ -56,6 +57,8 @@ pytest -m "not integration"            # skip the end-to-end checks
 ![Geese delivering on collision-free routes](figures/demo.gif)
 
 Geese plan routes in first-come-first-served order, never share or swap cells, and wait for or step around people they sense within 2 cells.
+
+**Wait-time counter:** every run prints how long each order waited, from being placed to being dropped off at its room, plus the average and longest wait. The animation shows a live counter per order that stops with a ✓ on delivery.
 
 **Pre-bundling** (`--bundle`): orders from the same counter whose rooms are at most 6 steps apart share one trip, so a goose can carry two orders. Trips are served first come, first served; later orders wait for the next round.
 
