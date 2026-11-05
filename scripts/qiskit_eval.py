@@ -27,6 +27,8 @@ def main():
     ap.add_argument("--geese", type=int, nargs="+", default=[4])
     ap.add_argument("--scenarios", type=int, default=20)
     ap.add_argument("--bundle", action="store_true")
+    ap.add_argument("--no-priority", action="store_true",
+                    help="plain walking-distance costs (the model is trained on priority costs)")
     ap.add_argument("--out", default="data/qiskit_eval.csv")
     args = ap.parse_args()
 
@@ -34,7 +36,8 @@ def main():
     for n in args.geese:
         for k in range(args.scenarios):
             seed = 20_000 + k  # not used in training
-            scn = campus.make_scenario(n, random.Random(seed), bundle=args.bundle)
+            scn = campus.make_scenario(n, random.Random(seed), bundle=args.bundle,
+                                       priority=not args.no_priority)
             _, best = solve_classical(scn["cost"])
             for start in ("warm", "random"):
                 with warnings.catch_warnings():

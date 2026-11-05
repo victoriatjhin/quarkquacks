@@ -118,16 +118,26 @@ class Campus:
             self._room_dist[a] = bfs_distances(a, self.grid)
         return self._room_dist[a][b]
 
-    def make_scenario(self, n, rng=None, bundle=False, max_room_gap=MAX_ROOM_GAP):
+    def make_scenario(self, n, rng=None, bundle=False, max_room_gap=MAX_ROOM_GAP, priority=False):
         """n geese and n orders. Cost = walking distance (goose -> counter -> room).
 
         bundle=True: 2n orders arrive, nearby same-counter orders are bundled, and
         the first n trips (first come, first served) are assigned to the n geese;
         later orders wait for the next round ("waiting" in the result).
+
+        priority=True: cost = priority x walking distance, where each order (or
+        trip) gets its own priority by arrival: the first gets n, the last gets 1.
+        Plain distance makes most scenarios degenerate (many assignments tie),
+        because the counter -> room leg is the same for every goose, so swapping
+        the geese on two same-counter orders never changes the total. A distinct
+        priority per order breaks those ties. The plain distances are kept in
+        "distance".
         """
         rng = rng or random.Random()
-        if bundle:
-            return self._make_bundled(n, rng, max_room_gap)
+        scn = self._make_bundled(n, rng, max_room_gap) if bundle else self._make_plain(n, rng)
+        return add_priority(scn) if priority else scn
+
+    def _make_plain(self, n, rng):
         bots = rng.sample(self.floor, n)
         orders = []
         for _ in range(n):
@@ -156,3 +166,19 @@ class Campus:
         cost = np.array([[self.trip_length(tuple(b), t) for t in chosen] for b in bots], dtype=float)
         return {"bots": bots, "orders": chosen, "cost": cost.tolist(), "arrivals": arrivals,
                 "waiting": sorted(i for t in later for i in t["orders"])}
+
+
+def add_priority(scenario):
+    """Weight each order's column by its arrival priority (first = n ... last = 1).
+
+    Multiplying (not adding) matters: a per-order term added to the cost is the
+    same for every assignment, so it would break no ties.
+    """
+    dist = np.asarray(scenario["cost"], dtype=float)
+    n = dist.shape[1]
+    weights = np.arange(n, 0, -1, dtype=float)
+    for order, w in zip(scenario["orders"], weights):
+        order["priority"] = int(w)
+    scenario["distance"] = dist.tolist()
+    scenario["cost"] = (dist * weights).tolist()
+    return scenario
