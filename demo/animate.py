@@ -39,9 +39,10 @@ def run(n, seed, bundle=False):
 def pick_seed(n, bundle=False):
     """First scenario that shows waiting for a goose and a person (and a bundle)."""
     for seed in range(500):
-        _, scn, _, _, stats = run(n, seed, bundle)
-        has_bundle = any(len(o.get("rooms", [])) == 2 for o in scn["orders"])
+        _, scn, _, frames, stats = run(n, seed, bundle)
+        has_bundle = any(len(set(o.get("rooms", []))) == 2 for o in scn["orders"])  # two different rooms
         if (stats["all_delivered"] and stats["waits_for_goose"] and stats["waits_for_person"]
+                and len(frames) <= 70  # short enough to watch
                 and (has_bundle or not bundle)):
             return seed
     return 0

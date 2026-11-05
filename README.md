@@ -45,7 +45,7 @@ python demo/animate.py --bundle --out figures/demo_bundle.gif   # with pre-bundl
 python demo/plot_map.py                # labelled campus map, figures/campus_map.png
 python scripts/gpu_benchmark.py        # CPU vs. GPU QAOA timing at 4-25 qubits (needs qiskit-aer-gpu for GPU)
 python scripts/carpool_eval.py         # carpool mode: QAOA vs. random guessing (about 1 min)
-python scripts/qiskit_eval.py          # real Qiskit QAOA at 4 geese: warm vs. random start (about 10 min)
+python -m quantum.quantum_benchmark    # real Qiskit QAOA, warm vs. random start; set max_n=4 for the full test set (about 20 min)
 pytest                                 # all tests incl. end-to-end integration (about 1 min)
 pytest -m "not integration"            # skip the end-to-end checks
 ```
@@ -66,21 +66,25 @@ Geese plan routes in first-come-first-served order, never share or swap cells, a
 
 ## Results
 
-An ML model trained on 360 simulated scenarios predicts QAOA's starting angles, cutting the optimizer's work by 71–91% on 90 scenarios it never saw, with equal or better plans. Every QAOA plan is checked against an exact classical solver, and the routing layer delivered every order with zero collisions across 1,000 simulated runs. At this size the classical solver is exact and near-instant, so we don't claim a quantum advantage; the project shows a verifiable bridge from a real problem to QAOA and a way to make QAOA much cheaper to run.
+Every QAOA plan is checked against an exact classical solver, and the routing layer delivered every order with zero collisions across 1,000 simulated runs. At this size the classical solver is exact and near-instant, so we don't claim a quantum advantage; the project shows a verifiable bridge from a real problem to QAOA.
+
+**Cost = walking steps x priority.** With plain walking distance, many scenarios had several equally good plans (every plan tied in 63% / 48% / 21% of 2 / 3 / 4-goose scenarios), because the counter-to-room leg costs the same whichever goose walks it. Weighting each order by its arrival priority (first come = highest) leaves one best plan in 94% / 88% / 88% of scenarios, so the model learns from real differences between plans.
+
+**ML warm start.** A random forest trained on 360 scenarios predicts QAOA's starting angles (angle error 0.056 vs. 0.59 for k-nearest neighbours). On 90 scenarios it never saw, in our fast NumPy QAOA simulation:
 
 | Geese (qubits) | Optimizer steps, random start | Optimizer steps, ML warm start | Reduction |
 | --- | --- | --- | --- |
-| 2 (4) | 49 | 14 | 71% |
-| 3 (9) | 117 | 14 | 88% |
-| 4 (16) | 189 | 16 | 91% |
+| 2 (4) | 59 | 14 | 76% |
+| 3 (9) | 107 | 14 | 87% |
+| 4 (16) | 183 | 15 | 92% |
 
 ![ML warm start results](figures/warmstart.png)
 
-**In real Qiskit QAOA** (20 fresh 4-goose scenarios, 16 qubits): the warm start found the best plan 85% of the time vs. 60% for a random start, and always returned a valid plan (random: 75%). Step counts were similar (28 vs. 30), so in Qiskit the gain is reliability; the step savings above come from the fast simulation used for training.
+**In real Qiskit QAOA** (`quantum/quantum_benchmark.py`, same 90 test scenarios, `data/quantum_benchmark.csv`), the saving is much smaller, because Qiskit's optimizer settles in about 25-30 steps from any start: 24 vs. 29 steps at 2 geese (18% fewer), 28 vs. 29 at 3 (6%), 29 vs. 29 at 4 (2%). Up to 9 qubits the solver always returns the best plan. At 16 qubits QAOA returns the single best plan 30% of the time (random start: 37%), but every plan it returned in a 10-scenario check was valid, on average 2.1% above the best, and within 5% of it 90% of the time. The safety check flags any gap, and an invalid plan is never sent out.
 
 ![Scaling from 2 to 4 geese](figures/scaling.png)
 
-**Pre-bundling:** the warm start transfers to bundled scenarios without retraining (68% / 88% / 93% fewer optimizer steps at 2 / 3 / 4 geese).
+**Pre-bundling:** the warm start transfers to bundled scenarios without retraining (74% / 87% / 91% fewer optimizer steps at 2 / 3 / 4 geese in the fast simulation).
 
 **Carpool mode:** QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
 
