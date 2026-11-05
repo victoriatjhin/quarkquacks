@@ -106,16 +106,22 @@ def deliver(campus, scenario, assignment, args, drops, waypoints=None):
 
 
 def run_assignment(args, campus):
-    scenario = campus.make_scenario(args.geese, random.Random(args.seed), bundle=args.bundle)
+    scenario = campus.make_scenario(args.geese, random.Random(args.seed), bundle=args.bundle, priority=True)
     cost = scenario["cost"]
+
+    dist = scenario["distance"]
 
     def total(assignment):
         return None if assignment is None else sum(cost[g][o] for g, o in assignment.items())
 
+    def walking(assignment):
+        return sum(dist[g][o] for g, o in assignment.items())
+
     print(f"Scenario: {args.geese} geese ({args.geese ** 2} qubits), seed {args.seed}"
           f"{', bundled' if args.bundle else ''}")
     for g, order in enumerate(scenario["orders"]):
-        print(f"  trip {g}: {describe(order)}")
+        print(f"  trip {g}: {describe(order)} (priority {order['priority']})")
+    print("  cost = walking steps x priority (first come = highest), so earlier orders are served first")
     if scenario.get("waiting"):
         print(f"  waiting for next round: orders {scenario['waiting']}")
 
@@ -128,19 +134,20 @@ def run_assignment(args, campus):
 
     print(f"\nML predicted angles: gamma={gamma:.3f}, beta={beta:.3f}")
     def shown(assignment):
-        return "invalid plan" if assignment is None else f"cost {total(assignment):.0f}"
+        return ("invalid plan" if assignment is None
+                else f"cost {total(assignment):.0f} ({walking(assignment):.0f} walking steps)")
 
     print(f"QAOA warm start: {shown(warm['assignment'])}, {warm['evaluations']} optimizer steps")
     if cold:
         print(f"QAOA random:     {shown(cold['assignment'])}, {cold['evaluations']} optimizer steps")
-    print(f"Classical best:  cost {best_cost:.0f}")
+    print(f"Classical best:  {shown(dict(enumerate(perm)))}")
 
     plan = warm["assignment"]
     if plan is None:  # safety gate: never send geese out with an invalid plan
         plan = dict(enumerate(perm))
         print("QAOA plan was invalid: using the classical plan instead")
     elif total(plan) > best_cost + 1e-9:
-        print(f"QAOA plan is valid but {total(plan) - best_cost:.0f} steps longer than the best")
+        print(f"QAOA plan is valid but costs {total(plan) - best_cost:.0f} more than the best")
 
     frames, _, waits = deliver(campus, scenario, plan, args, assignment_drops(scenario, plan))
     trips = {g: ([campus.named[scenario["orders"][o]["counter"]]] +

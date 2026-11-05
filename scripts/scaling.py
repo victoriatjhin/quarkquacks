@@ -49,7 +49,7 @@ def main():
     for n in args.sizes:
         t_size = time.time()
         for _ in range(args.per_size):
-            scn = campus.make_scenario(n, rng)
+            scn = campus.make_scenario(n, rng, priority=True)
 
             t = time.perf_counter()
             perm, _ = solve_classical(scn["cost"])
