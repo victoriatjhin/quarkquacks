@@ -29,7 +29,7 @@ from quarkquacks.routes import assignment_drops, simulate  # noqa: E402
 
 def run(n, seed, bundle=False):
     campus = Campus()
-    scn = campus.make_scenario(n, random.Random(seed), bundle=bundle)
+    scn = campus.make_scenario(n, random.Random(seed), bundle=bundle, priority=True)
     perm, _ = solve_classical(scn["cost"])
     assignment = dict(enumerate(perm))
     frames, stats = simulate(campus, scn, assignment, n_people=3, seed=seed)
