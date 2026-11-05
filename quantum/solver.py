@@ -14,6 +14,7 @@ to_qiskit_angles() does both conversions.
 """
 
 import numpy as np
+from scipy.optimize import linear_sum_assignment
 from qiskit.primitives import StatevectorSampler
 from qiskit.transpiler import generate_preset_pass_manager
 from qiskit_algorithms import QAOA
