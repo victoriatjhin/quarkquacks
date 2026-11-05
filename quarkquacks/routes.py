@@ -143,7 +143,11 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
     """Run the delivery tick by tick. Returns frames and stats.
 
     Each frame: {"t", "geese": {goose: cell or None once delivered},
-                 "people": [cells], "waiting": {goose: reason}}
+                 "people": [cells], "waiting": {goose: reason},
+                 "stops": {goose: number of waypoints reached so far}}
+
+    stats["stop_times"][goose][k] is the step at which the goose reached its
+    k-th waypoint (counter pickups and room drop-offs), used for wait times.
     """
     rng = random.Random(seed)
     grid = campus.grid
@@ -154,7 +158,8 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
     next_wp = {g: 0 for g in order}
     waited = {g: 0 for g in order}
     done = set()
-    stats = {"waits_for_goose": 0, "waits_for_person": 0, "replans": 0}
+    stats = {"waits_for_goose": 0, "waits_for_person": 0, "replans": 0,
+             "stop_times": {g: [] for g in order}, "paused": {g: 0 for g in order}}
 
     named = set(campus.named.values())
     counters = {cell for sym, cell in campus.named.items() if not sym.isdigit()}
@@ -163,7 +168,7 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
 
     def snapshot(t, waiting):
         return {"t": t, "geese": {g: (None if g in done else pos[g]) for g in order},
-                "people": list(people), "waiting": dict(waiting)}
+                "people": list(people), "waiting": dict(waiting), "stops": dict(next_wp)}
 
     frames = [snapshot(0, {})]
     for t in range(max_ticks):
@@ -198,6 +203,7 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
             else:
                 waiting[g] = reason
                 stats["waits_for_goose" if reason == "goose" else "waits_for_person"] += 1
+                stats["paused"][g] += 1
                 waited[g] += 1
                 blocker = claimed_by.get(want) or next(
                     (h for h in active if h != g and pos[h] == want), None)
@@ -229,6 +235,7 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
             wps = waypoints[g]
             while next_wp[g] < len(wps) and pos[g] == wps[next_wp[g]]:
                 next_wp[g] += 1
+                stats["stop_times"][g].append(t + 1)
             if next_wp[g] == len(wps):
                 done.add(g)  # handed the food over and went into the room
 
@@ -243,6 +250,35 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
     stats["ticks"] = frames[-1]["t"]
     stats["all_delivered"] = len(done) == len(order)
     return frames, stats
+
+
+def assignment_drops(scenario, assignment):
+    """Drop-off stops for assignment mode: [{"order", "label", "goose", "stop"}].
+
+    `stop` is the waypoint index of the drop-off (0 is the counter pickup). With
+    bundling, each order inside a bundle gets its own entry, numbered by arrival.
+    """
+    drops = []
+    for g, o in sorted(assignment.items(), key=lambda kv: kv[1]):
+        trip = scenario["orders"][o]
+        rooms = trip.get("rooms", [trip["room"]])
+        items = trip.get("items", [trip["item"]])
+        ids = trip.get("orders", [o])
+        for k, room in enumerate(rooms):
+            drops.append({"order": ids[k], "label": f"{items[k]} to room {room}", "goose": g, "stop": 1 + k})
+    return sorted(drops, key=lambda d: d["order"])
+
+
+def order_wait_times(stats, drops):
+    """Wait per order: steps from the order being placed (step 0) to its drop-off.
+
+    Returns drops with "wait" filled in (None if that order was never delivered).
+    """
+    out = []
+    for d in drops:
+        times = stats["stop_times"].get(d["goose"], [])
+        out.append({**d, "wait": times[d["stop"]] if d["stop"] < len(times) else None})
+    return out
 
 
 def check_frames(frames):

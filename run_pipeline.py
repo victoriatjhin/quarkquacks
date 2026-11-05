@@ -29,7 +29,7 @@ from ml.model import predict_angles  # noqa: E402
 from quantum.solver import solve_qaoa  # noqa: E402
 from quarkquacks import Campus, solve_classical  # noqa: E402
 from quarkquacks.carpool import make_carpool_scenario, solve_carpool  # noqa: E402
-from quarkquacks.routes import check_frames, simulate  # noqa: E402
+from quarkquacks.routes import assignment_drops, check_frames, order_wait_times, simulate  # noqa: E402
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "demo"))
 from animate import render_gif  # noqa: E402
@@ -69,7 +69,30 @@ def plot_plan(campus, scenario, trips, path, title):
     plt.close(fig)
 
 
-def deliver(campus, scenario, assignment, args, waypoints=None):
+def as_time(steps, step_seconds):
+    if not step_seconds:
+        return f"{steps} steps"
+    seconds = steps * step_seconds
+    return f"{steps} steps (~{seconds / 60:.1f} min)" if seconds >= 60 else f"{steps} steps (~{seconds:.0f} s)"
+
+
+def print_waits(waits, stats, step_seconds):
+    """Per-order wait-time table: how long each customer waited for their food."""
+    print("\nWait time per order (every order placed at step 0):")
+    width = max(len(w["label"]) for w in waits)
+    for w in waits:
+        when = "NOT delivered" if w["wait"] is None else f"delivered after {as_time(w['wait'], step_seconds)}"
+        print(f"  order {w['order']}: {w['label']:<{width}}  G{w['goose']}  {when}")
+    done = [w["wait"] for w in waits if w["wait"] is not None]
+    if done:
+        longest = max(waits, key=lambda w: -1 if w["wait"] is None else w["wait"])
+        paused = sum(stats["paused"].values())
+        print(f"  average wait {as_time(round(sum(done) / len(done), 1), step_seconds)}, longest "
+              f"{as_time(longest['wait'], step_seconds)} (order {longest['order']}); "
+              f"geese paused {paused} steps in total to avoid collisions")
+
+
+def deliver(campus, scenario, assignment, args, drops, waypoints=None):
     """Collision-free delivery of the chosen plan; the safety check raises if anything collides."""
     frames, stats = simulate(campus, scenario, assignment, n_people=args.people, seed=args.seed,
                              waypoints=waypoints)
@@ -77,7 +100,9 @@ def deliver(campus, scenario, assignment, args, waypoints=None):
     print(f"Delivery: {'all trips delivered' if stats['all_delivered'] else 'NOT all delivered'} "
           f"in {stats['ticks']} steps, 0 collisions; waited {stats['waits_for_goose']}x for geese, "
           f"{stats['waits_for_person']}x for people")
-    return frames, stats
+    waits = order_wait_times(stats, drops)
+    print_waits(waits, stats, args.step_seconds)
+    return frames, stats, waits
 
 
 def run_assignment(args, campus):
@@ -102,10 +127,13 @@ def run_assignment(args, campus):
     perm, best_cost = solve_classical(cost)
 
     print(f"\nML predicted angles: gamma={gamma:.3f}, beta={beta:.3f}")
-    print(f"QAOA warm start: cost {total(warm['assignment'])}, {warm['evaluations']} optimizer steps")
+    def shown(assignment):
+        return "invalid plan" if assignment is None else f"cost {total(assignment):.0f}"
+
+    print(f"QAOA warm start: {shown(warm['assignment'])}, {warm['evaluations']} optimizer steps")
     if cold:
-        print(f"QAOA random:     cost {total(cold['assignment'])}, {cold['evaluations']} optimizer steps")
-    print(f"Classical best:  cost {best_cost}")
+        print(f"QAOA random:     {shown(cold['assignment'])}, {cold['evaluations']} optimizer steps")
+    print(f"Classical best:  cost {best_cost:.0f}")
 
     plan = warm["assignment"]
     if plan is None:  # safety gate: never send geese out with an invalid plan
@@ -114,11 +142,11 @@ def run_assignment(args, campus):
     elif total(plan) > best_cost + 1e-9:
         print(f"QAOA plan is valid but {total(plan) - best_cost:.0f} steps longer than the best")
 
-    frames, _ = deliver(campus, scenario, plan, args)
+    frames, _, waits = deliver(campus, scenario, plan, args, assignment_drops(scenario, plan))
     trips = {g: ([campus.named[scenario["orders"][o]["counter"]]] +
                  [campus.named[r] for r in scenario["orders"][o].get("rooms", [scenario["orders"][o]["room"]])],
                  describe(scenario["orders"][o])) for g, o in plan.items()}
-    return scenario, plan, trips, frames
+    return scenario, plan, trips, frames, waits
 
 
 def run_carpool(args, campus):
@@ -143,10 +171,13 @@ def run_carpool(args, campus):
 
     busy = {g: min(orders) for g, orders in plan.items() if orders}  # first come, first served
     waypoints = problem.waypoints(plan)
-    frames, _ = deliver(campus, scenario, busy, args, waypoints)
+    drops = [{"order": o, "label": f"{scenario['orders'][o]['item']} to room {scenario['orders'][o]['room']}",
+              "goose": g, "stop": stop}
+             for g, stops in problem.drop_stops(plan).items() for o, stop in stops]
+    frames, _, waits = deliver(campus, scenario, busy, args, sorted(drops, key=lambda d: d["order"]), waypoints)
     trips = {g: (waypoints[g], describe_orders([scenario["orders"][o] for o in sorted(orders)]))
              for g, orders in plan.items() if orders}
-    return scenario, busy, trips, frames
+    return scenario, busy, trips, frames, waits
 
 
 def main(argv=None):
@@ -161,6 +192,8 @@ def main(argv=None):
     ap.add_argument("--no-compare", action="store_true", help="skip the random-start QAOA comparison")
     ap.add_argument("--out", default="figures/pipeline_example.png")
     ap.add_argument("--gif", default=None, help="also save the delivery animation here")
+    ap.add_argument("--step-seconds", type=float, default=None,
+                    help="seconds a goose takes per step, to show wait times in minutes")
     args = ap.parse_args(argv)
     args.geese_set = args.geese is not None
     if args.geese is None:
@@ -170,17 +203,17 @@ def main(argv=None):
 
     campus = Campus()
     if args.carpool:
-        scenario, assignment, trips, frames = run_carpool(args, campus)
+        scenario, assignment, trips, frames, waits = run_carpool(args, campus)
         title = "Carpool plan: goose → counters → rooms (straight-line sketch)"
     else:
-        scenario, assignment, trips, frames = run_assignment(args, campus)
+        scenario, assignment, trips, frames, waits = run_assignment(args, campus)
         title = "Delivery plan: goose → counter → room (straight-line sketch)"
 
     plot_plan(campus, scenario, trips, args.out, title)
     print(f"\nPlan saved to {args.out}")
     if args.gif:
         legend = "   ".join(f"G{g}: {label}" for g, (_, label) in sorted(trips.items()))
-        render_gif(campus, frames, legend, args.gif, len(trips))
+        render_gif(campus, frames, legend, args.gif, len(trips), waits)
         print(f"Animation saved to {args.gif}")
 
 

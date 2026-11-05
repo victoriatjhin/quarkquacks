@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from draw import GOOSE_COLORS, INK, MUTED, draw_campus, draw_goose, draw_person  # noqa: E402
 
 from quarkquacks import Campus, solve_classical  # noqa: E402
-from quarkquacks.routes import simulate  # noqa: E402
+from quarkquacks.routes import assignment_drops, simulate  # noqa: E402
 
 
 def run(n, seed, bundle=False):
@@ -53,9 +53,29 @@ def describe(order):
     return f"{what} → room{'s' if len(rooms) > 1 else ''} {', '.join(rooms)}"
 
 
-def render_gif(campus, frames, legend, out, n_trips):
-    """Save an animation of simulated frames (from quarkquacks.routes.simulate)."""
-    fig, ax = plt.subplots(figsize=(8, 5.6))
+def wait_line(frame, drops, delivered_at):
+    """'Wait per order:  #0 18 ✓   #1 23 …' for one frame (live counter)."""
+    parts = []
+    for d in drops:
+        key = (d["goose"], d["stop"])
+        if key in delivered_at and delivered_at[key] <= frame["t"]:
+            parts.append(f"#{d['order']} {delivered_at[key]} ✓")
+        else:
+            parts.append(f"#{d['order']} {frame['t']} …")
+    return "Wait per order (steps):   " + "    ".join(parts)
+
+
+def render_gif(campus, frames, legend, out, n_trips, drops=None):
+    """Save an animation of simulated frames (from quarkquacks.routes.simulate).
+
+    drops (from quarkquacks.routes.assignment_drops) adds a live wait counter per order.
+    """
+    fig, ax = plt.subplots(figsize=(8, 5.8 if drops else 5.6))
+    delivered_at = {}
+    for f in frames:  # first frame at which each drop-off stop was reached
+        for g, reached in f.get("stops", {}).items():
+            for stop in range(reached):
+                delivered_at.setdefault((g, stop), f["t"])
 
     def draw(i):
         ax.clear()
@@ -72,6 +92,9 @@ def render_gif(campus, frames, legend, out, n_trips):
         ax.set_title(f"t = {frame['t']}  ·  trips delivered {delivered}/{n_trips}",
                      fontsize=10, loc="left", color=INK)
         ax.text(0, -0.04, legend, transform=ax.transAxes, fontsize=7.5, color=MUTED, va="top")
+        if drops:
+            ax.text(0, -0.10, wait_line(frame, drops, delivered_at), transform=ax.transAxes, fontsize=8,
+                    color=INK, va="top", weight="bold")
         fig.tight_layout()
 
     anim = FuncAnimation(fig, draw, frames=len(frames), interval=180)
@@ -91,7 +114,7 @@ def main():
     seed = pick_seed(args.geese, args.bundle) if args.seed is None else args.seed
     campus, scn, assignment, frames, stats = run(args.geese, seed, args.bundle)
     legend = "   ".join(f"G{g}: {describe(scn['orders'][o])}" for g, o in sorted(assignment.items()))
-    render_gif(campus, frames, legend, args.out, len(assignment))
+    render_gif(campus, frames, legend, args.out, len(assignment), assignment_drops(scn, assignment))
     print(f"Saved {args.out} (seed {seed}, {len(frames)} frames, "
           f"{stats['waits_for_goose']} waits for geese, {stats['waits_for_person']} for people)")
 
