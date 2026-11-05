@@ -59,14 +59,27 @@ def solve_qaoa(cost, warm_start=None, maxiter=100, seed=0):
 
     # the exact best plan, from the classical solver
     rows, cols = linear_sum_assignment(cost)
-    optimal = {int(r): int(c) for r, c in zip(rows, cols)}
+    rows, cols = linear_sum_assignment(cost)
+    opt_cost = float(cost[rows, cols].sum())
+    
+    from itertools import permutations
+    k = sum(1 for p in permutations(range(n))
+            if abs(sum(cost[b, p[b]] for b in range(n)) - opt_cost) < 1e-9)
+    chance = k / 2 ** (n * n)
 
-    # share of all samples that landed on exactly that plan
-    p_optimal = sum(s.probability for s in result.samples
-                    if bits_to_assignment(s.x[: n * n], n) == optimal)
+    def plan_cost(x):
+        a = bits_to_assignment(x[: n * n], n)
+        return None if a is None else float(sum(cost[b, o] for b, o in a.items()))
+
+    p_optimal = 0.0
+    for s in result.samples:
+        c = plan_cost(s.x)
+        if c is not None and abs(c - opt_cost) < 1e-9:
+            p_optimal += s.probability
     return {"assignment": assignment,
             "cost": real_cost,
             "p_optimal": p_optimal,
+            "chance": chance,
             "evaluations": len(evals)}
 
 
