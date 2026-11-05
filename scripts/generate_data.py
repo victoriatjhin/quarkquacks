@@ -32,6 +32,8 @@ def main():
     ap.add_argument("--out", default="data")
     ap.add_argument("--append", action="store_true",
                     help="add to the existing dataset instead of replacing it")
+    ap.add_argument("--no-priority", action="store_true",
+                    help="plain walking-distance costs (most scenarios degenerate; not recommended)")
     ap.add_argument("--refine-existing", action="store_true",
                     help="re-label the existing dataset with refined angles, no new scenarios")
     args = ap.parse_args()
@@ -52,7 +54,7 @@ def main():
     first_id = len(scenarios)
 
     for i in range(first_id, first_id + args.n):
-        scn = campus.make_scenario(rng.choice(args.sizes), rng)
+        scn = campus.make_scenario(rng.choice(args.sizes), rng, priority=not args.no_priority)
         C = normalized_cost_vector(scn["cost"])
         perm, opt_cost = solve_classical(scn["cost"])
         e, gamma, beta = refine(C, *grid_search(C, args.grid)[1:])

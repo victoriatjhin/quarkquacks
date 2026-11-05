@@ -44,3 +44,21 @@ def test_every_cell_reachable(campus):
     """No goose can be stuck: every hallway cell connects to every counter."""
     for counter in campus.dist_from.values():
         assert set(counter) == set(campus.floor)
+
+
+def test_priority_breaks_same_counter_ties():
+    """Priority = arrival rank multiplies distance, so swapping geese on same-counter orders changes the cost."""
+    import itertools
+
+    campus = Campus()
+    plain = campus.make_scenario(3, random.Random(5))
+    weighted = campus.make_scenario(3, random.Random(5), priority=True)
+    assert weighted["bots"] == plain["bots"] and weighted["distance"] == plain["cost"]
+    assert [o["priority"] for o in weighted["orders"]] == [3, 2, 1]
+
+    def n_optimal(cost):
+        totals = [sum(cost[g][p[g]] for g in range(3)) for p in itertools.permutations(range(3))]
+        return sum(np.isclose(totals, min(totals)))
+
+    assert n_optimal(plain["cost"]) == 6        # every assignment ties: fully degenerate
+    assert n_optimal(weighted["cost"]) == 1     # unique best plan
