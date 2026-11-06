@@ -1,0 +1,6 @@
+mode,orders_per_round,walking_steps_per_order,avg_wait_steps,round_steps
+No bundling,4.00,27.9,39.3,55.7
+Bundles of 2 (current),5.69,20.3,39.5,56.8
+"Bundles of 2, across counters",7.07,17.3,42.7,60.5
+Bundles of 3,7.43,15.8,39.3,57.8
+"Bundles of 3, across counters",10.36,12.4,44.5,63.8

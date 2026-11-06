@@ -70,7 +70,7 @@ def test_full_pipeline(campus, n_geese, seed, bundle):
     assert stats["all_delivered"], "routes: not every order was delivered in time"
 
 
-@pytest.mark.parametrize("mode", [[], ["--bundle"], ["--carpool"]])
+@pytest.mark.parametrize("mode", [[], ["--bundle"], ["--bundle-size", "3", "--cross-counter"], ["--carpool"]])
 def test_run_pipeline_script(tmp_path, mode):
     """The one-command demo runs end to end in every mode and saves its plot and animation."""
     import run_pipeline
