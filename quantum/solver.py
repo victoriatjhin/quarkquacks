@@ -46,7 +46,7 @@ def solve_qaoa(cost, warm_start=None, maxiter=100, seed=0):
     compiler = generate_preset_pass_manager(optimization_level=1, basis_gates=["h", "rx", "rz", "rzz", "cx"])
     qaoa = QAOA(
         sampler=StatevectorSampler(seed=seed),
-        optimizer=COBYLA(maxiter=maxiter),
+        optimizer=COBYLA(maxiter=maxiter, rhobeg=0.1),
         reps=1,
         initial_point=initial_point,
         callback=lambda count, params, value, meta: evals.append(value),
