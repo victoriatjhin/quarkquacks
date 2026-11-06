@@ -30,6 +30,7 @@ Then:
 ```bash
 python run_pipeline.py                 # full pipeline, 4 geese: ML -> QAOA -> classical check -> collision-free delivery
 python run_pipeline.py --bundle        # same, with nearby orders pre-bundled into one trip
+python run_pipeline.py --bundle-size 3 --cross-counter   # up to 3 orders per trip, from nearby counters too
 python run_pipeline.py --carpool       # carpool mode: QAOA decides which orders share a goose (2 geese, 4 orders)
 python run_pipeline.py --gif figures/run.gif   # any mode: also save the delivery animation
 python run_pipeline.py --step-seconds 3        # show each order's wait time in minutes too
@@ -85,6 +86,20 @@ Every QAOA plan is checked against an exact classical solver, and the routing la
 ![Scaling from 2 to 4 geese](figures/scaling.png)
 
 **Pre-bundling:** the warm start transfers to bundled scenarios without retraining (74% / 87% / 91% fewer optimizer steps at 2 / 3 / 4 geese in the fast simulation).
+
+**Multi-order bundling:** `--bundle-size 3` lets one goose carry up to 3 nearby orders, and `--cross-counter` lets orders from different counters share a trip (the goose picks up at each counter, then drops off at each room, in the order that walks least). Over 100 four-goose scenarios (`data/multi_bundle_eval.csv`):
+
+| Mode | Orders served per round | Walking steps per order | Average wait (steps) |
+| --- | --- | --- | --- |
+| No bundling | 4.0 | 27.9 | 39.3 |
+| Bundles of 2 | 5.7 | 20.3 | 39.5 |
+| Bundles of 2, across counters | 7.1 | 17.3 | 42.7 |
+| Bundles of 3 | 7.4 | 15.8 | 39.3 |
+| Bundles of 3, across counters | 10.4 | 12.4 | 44.5 |
+
+Four geese serve 2.6 times as many orders per round with 56% less walking per order; each served order waits about 13% longer. The QUBO, QAOA and warm start are unchanged: they still assign one trip per goose.
+
+![Multi-order bundling](figures/demo_multi_bundle.gif)
 
 **Carpool mode:** QAOA chooses which orders share a goose, with validation, repair and a classical fallback so every plan is valid. With 50 samples, QAOA finds the best plan directly 63% of the time vs. 40% for random guessing.
 

@@ -27,20 +27,25 @@ from quarkquacks import Campus, solve_classical  # noqa: E402
 from quarkquacks.routes import assignment_drops, simulate  # noqa: E402
 
 
-def run(n, seed, bundle=False):
+def run(n, seed, bundle=False, bundle_size=2, cross_counter=False):
     campus = Campus()
-    scn = campus.make_scenario(n, random.Random(seed), bundle=bundle, priority=True)
+    scn = campus.make_scenario(n, random.Random(seed), bundle=bundle, priority=True, bundle_size=bundle_size,
+                               cross_counter=cross_counter)
     perm, _ = solve_classical(scn["cost"])
     assignment = dict(enumerate(perm))
     frames, stats = simulate(campus, scn, assignment, n_people=3, seed=seed)
     return campus, scn, assignment, frames, stats
 
 
-def pick_seed(n, bundle=False):
+def pick_seed(n, bundle=False, bundle_size=2, cross_counter=False):
     """First scenario that shows waiting for a goose and a person (and a bundle)."""
     for seed in range(500):
-        _, scn, _, frames, stats = run(n, seed, bundle)
-        has_bundle = any(len(set(o.get("rooms", []))) == 2 for o in scn["orders"])  # two different rooms
+        _, scn, _, frames, stats = run(n, seed, bundle, bundle_size, cross_counter)
+        has_bundle = any(len(set(o.get("rooms", []))) >= 2 for o in scn["orders"])  # two different rooms
+        if bundle_size == 3:
+            has_bundle = has_bundle and any(len(o.get("rooms", [])) == 3 for o in scn["orders"])
+        if cross_counter:
+            has_bundle = has_bundle and any(len(o.get("counters", [])) >= 2 for o in scn["orders"])
         if (stats["all_delivered"] and stats["waits_for_goose"] and stats["waits_for_person"]
                 and len(frames) <= 70  # short enough to watch
                 and (has_bundle or not bundle)):
@@ -109,11 +114,15 @@ def main():
     ap.add_argument("--geese", type=int, default=4, choices=[2, 3, 4])
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bundle", action="store_true", help="pre-bundle nearby orders into one trip")
+    ap.add_argument("--bundle-size", type=int, default=2, choices=[2, 3])
+    ap.add_argument("--cross-counter", action="store_true")
     ap.add_argument("--out", default="figures/demo.gif")
     args = ap.parse_args()
 
-    seed = pick_seed(args.geese, args.bundle) if args.seed is None else args.seed
-    campus, scn, assignment, frames, stats = run(args.geese, seed, args.bundle)
+    bundle = args.bundle or args.bundle_size != 2 or args.cross_counter
+    seed = (pick_seed(args.geese, bundle, args.bundle_size, args.cross_counter) if args.seed is None
+            else args.seed)
+    campus, scn, assignment, frames, stats = run(args.geese, seed, bundle, args.bundle_size, args.cross_counter)
     legend = "   ".join(f"G{g}: {describe(scn['orders'][o])}" for g, o in sorted(assignment.items()))
     render_gif(campus, frames, legend, args.out, len(assignment), assignment_drops(scn, assignment))
     print(f"Saved {args.out} (seed {seed}, {len(frames)} frames, "
