@@ -99,12 +99,13 @@ def static_path(grid, start, waypoints, blocked=frozenset()):
 
 
 def goose_waypoints(campus, scenario, assignment):
-    """{goose: [counter cell, room cell(s)]} for each assigned order or bundle."""
+    """{goose: [counter cell(s), room cell(s)]} for each assigned order or bundle."""
     out = {}
     for goose, order_idx in assignment.items():
         order = scenario["orders"][order_idx]
         rooms = order.get("rooms", [order["room"]])
-        out[goose] = [campus.named[order["counter"]]] + [campus.named[r] for r in rooms]
+        counters = order.get("counters", [order["counter"]])
+        out[goose] = [campus.named[c] for c in counters] + [campus.named[r] for r in rooms]
     return out
 
 
@@ -255,7 +256,7 @@ def simulate(campus, scenario, assignment, n_people=3, seed=0, max_ticks=MAX_TIC
 def assignment_drops(scenario, assignment):
     """Drop-off stops for assignment mode: [{"order", "label", "goose", "stop"}].
 
-    `stop` is the waypoint index of the drop-off (0 is the counter pickup). With
+    `stop` is the waypoint index of the drop-off (counter pickups come first). With
     bundling, each order inside a bundle gets its own entry, numbered by arrival.
     """
     drops = []
@@ -264,8 +265,10 @@ def assignment_drops(scenario, assignment):
         rooms = trip.get("rooms", [trip["room"]])
         items = trip.get("items", [trip["item"]])
         ids = trip.get("orders", [o])
+        first_drop = len(trip.get("counters", [trip["counter"]]))  # pickups come first
         for k, room in enumerate(rooms):
-            drops.append({"order": ids[k], "label": f"{items[k]} to room {room}", "goose": g, "stop": 1 + k})
+            drops.append({"order": ids[k], "label": f"{items[k]} to room {room}", "goose": g,
+                          "stop": first_drop + k})
     return sorted(drops, key=lambda d: d["order"])
 
 

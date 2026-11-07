@@ -10,6 +10,7 @@ Carpool mode (--carpool, a goose may carry two orders):
 
     python run_pipeline.py                         # 4 geese
     python run_pipeline.py --bundle                # 4 geese, nearby orders pre-bundled
+    python run_pipeline.py --bundle-size 3 --cross-counter   # up to 3 orders, from any nearby counters
     python run_pipeline.py --carpool               # 2 geese share 4 orders
     python run_pipeline.py --gif figures/run.gif   # also save the delivery animation
 """
@@ -80,9 +81,10 @@ def print_waits(waits, stats, step_seconds):
     """Per-order wait-time table: how long each customer waited for their food."""
     print("\nWait time per order (every order placed at step 0):")
     width = max(len(w["label"]) for w in waits)
+    id_width = max(len(str(w["order"])) for w in waits)
     for w in waits:
         when = "NOT delivered" if w["wait"] is None else f"delivered after {as_time(w['wait'], step_seconds)}"
-        print(f"  order {w['order']}: {w['label']:<{width}}  G{w['goose']}  {when}")
+        print(f"  order {w['order']:>{id_width}}: {w['label']:<{width}}  G{w['goose']}  {when}")
     done = [w["wait"] for w in waits if w["wait"] is not None]
     if done:
         longest = max(waits, key=lambda w: -1 if w["wait"] is None else w["wait"])
@@ -106,7 +108,9 @@ def deliver(campus, scenario, assignment, args, drops, waypoints=None):
 
 
 def run_assignment(args, campus):
-    scenario = campus.make_scenario(args.geese, random.Random(args.seed), bundle=args.bundle, priority=True)
+    bundle = args.bundle or args.bundle_size != 2 or args.cross_counter  # either option turns bundling on
+    scenario = campus.make_scenario(args.geese, random.Random(args.seed), bundle=bundle, priority=True,
+                                    bundle_size=args.bundle_size, cross_counter=args.cross_counter)
     cost = scenario["cost"]
 
     dist = scenario["distance"]
@@ -118,7 +122,8 @@ def run_assignment(args, campus):
         return sum(dist[g][o] for g, o in assignment.items())
 
     print(f"Scenario: {args.geese} geese ({args.geese ** 2} qubits), seed {args.seed}"
-          f"{', bundled' if args.bundle else ''}")
+          f"{f', bundled (up to {args.bundle_size} orders per trip' if bundle else ''}"
+          f"{', across counters' if bundle and args.cross_counter else ''}{')' if bundle else ''}")
     for g, order in enumerate(scenario["orders"]):
         print(f"  trip {g}: {describe(order)} (priority {order['priority']})")
     print("  cost = walking steps x priority (first come = highest), so earlier orders are served first")
@@ -150,7 +155,7 @@ def run_assignment(args, campus):
         print(f"QAOA plan is valid but costs {total(plan) - best_cost:.0f} more than the best")
 
     frames, _, waits = deliver(campus, scenario, plan, args, assignment_drops(scenario, plan))
-    trips = {g: ([campus.named[scenario["orders"][o]["counter"]]] +
+    trips = {g: ([campus.named[c] for c in scenario["orders"][o].get("counters", [scenario["orders"][o]["counter"]])] +
                  [campus.named[r] for r in scenario["orders"][o].get("rooms", [scenario["orders"][o]["room"]])],
                  describe(scenario["orders"][o])) for g, o in plan.items()}
     return scenario, plan, trips, frames, waits
@@ -192,6 +197,10 @@ def main(argv=None):
     ap.add_argument("--geese", type=int, default=None, help="default 4 (2 with --carpool)")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--bundle", action="store_true", help="pre-bundle nearby orders into one trip")
+    ap.add_argument("--bundle-size", type=int, default=2, choices=[2, 3],
+                    help="most orders one goose carries per trip (implies --bundle)")
+    ap.add_argument("--cross-counter", action="store_true",
+                    help="orders from different nearby counters may share a trip (implies --bundle)")
     ap.add_argument("--carpool", action="store_true", help="QAOA decides which orders share a goose")
     ap.add_argument("--orders", type=int, default=4, help="orders in carpool mode")
     ap.add_argument("--shots", type=int, default=1000, help="QAOA samples in carpool mode")

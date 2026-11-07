@@ -6,6 +6,7 @@ one trip, so one goose can carry two orders. Off by default, so the training
 data and results are unchanged.
 """
 
+import itertools
 import random
 from collections import deque
 
@@ -29,7 +30,9 @@ CAMPUS = [
 COUNTERS = {"A": "coffee", "B": "pizza", "C": "bubble tea"}
 ITEMS = {item: {"counter": counter} for counter, item in COUNTERS.items()}
 MAX_ROOM_GAP = 6       # bundle two orders only if their rooms are <= 6 steps apart
-BUNDLE_SIZE = 2        # a goose carries at most two bundled orders
+BUNDLE_SIZE = 2        # a goose carries at most two bundled orders (default)
+MAX_BUNDLE_SIZE = 3    # largest bundle allowed (--bundle-size 3)
+MAX_COUNTER_GAP = 6    # cross-counter bundles: counters at most 6 steps apart
 
 
 def find_cells(grid=CAMPUS):
@@ -75,40 +78,64 @@ class Campus:
             self._room_dist[a] = bfs_distances(a, self.grid)
         return self._room_dist[a][self.named[room_b]]
 
-    def bundle_orders(self, orders, max_room_gap=MAX_ROOM_GAP):
-        """Group orders first-come-first-served into trips of at most BUNDLE_SIZE.
+    def bundle_orders(self, orders, max_room_gap=MAX_ROOM_GAP, bundle_size=BUNDLE_SIZE,
+                      cross_counter=False, max_counter_gap=MAX_COUNTER_GAP):
+        """Group orders first-come-first-served into trips of at most bundle_size.
 
-        A new order joins the earliest open trip from the same counter whose
-        rooms are all within max_room_gap steps of its room; otherwise it starts
-        a new trip. Returns trips in order of their earliest order.
+        A new order joins the earliest open trip whose rooms are all within
+        max_room_gap steps of its room, and whose counter is the same (default)
+        or, with cross_counter=True, within max_counter_gap steps of every counter
+        already in the trip. Otherwise it starts a new trip. Returns trips in order
+        of their earliest order; each trip visits its counters, then its rooms, in
+        the order that walks least ("counters", "rooms", "orders" stay aligned).
         """
+        if not 1 <= bundle_size <= MAX_BUNDLE_SIZE:
+            raise ValueError(f"bundle_size must be 1-{MAX_BUNDLE_SIZE}")
         bundles = []
         for idx, order in enumerate(orders):
             for b in bundles:
-                if (len(b["orders"]) < BUNDLE_SIZE and b["counter"] == order["counter"]
-                        and all(self.room_gap(r, order["room"]) <= max_room_gap for r in b["rooms"])):
+                counters = {orders[i]["counter"] for i in b["orders"]}
+                if cross_counter:
+                    counter_ok = all(self._counter_gap(c, order["counter"]) <= max_counter_gap for c in counters)
+                else:
+                    counter_ok = counters == {order["counter"]}
+                if (len(b["orders"]) < bundle_size and counter_ok
+                        and all(self.room_gap(orders[i]["room"], order["room"]) <= max_room_gap
+                                for i in b["orders"])):
                     b["orders"].append(idx)
-                    b["rooms"].append(order["room"])
                     break
             else:
-                bundles.append({"item": order["item"], "counter": order["counter"],
-                                "rooms": [order["room"]], "orders": [idx]})
-        for b in bundles:  # visit rooms in the order that walks least from the counter
-            if len(b["rooms"]) == 2:
-                c = self.named[b["counter"]]
-                r1, r2 = b["rooms"]
-                if self.dist_from[c][self.named[r2]] < self.dist_from[c][self.named[r1]]:
-                    b["rooms"].reverse()
-            b["room"] = b["rooms"][-1]
-        return bundles
+                bundles.append({"orders": [idx]})
+        return [self._plan_trip(orders, b["orders"]) for b in bundles]
+
+    def _counter_gap(self, a, b):
+        return self.dist_from[self.named[a]][self.named[b]]
+
+    def _plan_trip(self, orders, ids):
+        """Trip for orders `ids`: visit counters, then rooms, in the order that walks least.
+
+        The goose's own walk to the first counter is added per goose in trip_length.
+        """
+        counters = list(dict.fromkeys(orders[i]["counter"] for i in ids))
+        best = None
+        for cs in itertools.permutations(counters):
+            for drop in itertools.permutations(ids):
+                stops = [self.named[c] for c in cs] + [self.named[orders[i]["room"]] for i in drop]
+                walk = sum(self._dist(a, b) for a, b in zip(stops, stops[1:]))
+                if best is None or walk < best[0]:
+                    best = (walk, list(cs), list(drop))
+        _, cs, drop = best
+        return {"item": orders[drop[0]]["item"], "counter": cs[0], "counters": cs,
+                "orders": drop, "rooms": [orders[i]["room"] for i in drop],
+                "items": [orders[i]["item"] for i in drop], "room": orders[drop[-1]]["room"]}
 
     def trip_length(self, start, order):
-        """Steps for one goose: start -> counter -> every room of the order or bundle."""
-        counter = self.named[order["counter"]]
-        steps = self.dist_from[counter][start]
-        here = counter
-        for room in order.get("rooms", [order["room"]]):
-            cell = self.named[room]
+        """Steps for one goose: start -> every counter -> every room of the order or bundle."""
+        counters = order.get("counters", [order["counter"]])
+        first = self.named[counters[0]]
+        steps = self.dist_from[first][start]
+        here = first
+        for cell in [self.named[c] for c in counters[1:]] + [self.named[r] for r in order.get("rooms", [order["room"]])]:
             steps += self.dist_from[here][cell] if here in self.dist_from else self._dist(here, cell)
             here = cell
         return steps
@@ -118,12 +145,15 @@ class Campus:
             self._room_dist[a] = bfs_distances(a, self.grid)
         return self._room_dist[a][b]
 
-    def make_scenario(self, n, rng=None, bundle=False, max_room_gap=MAX_ROOM_GAP, priority=False):
+    def make_scenario(self, n, rng=None, bundle=False, max_room_gap=MAX_ROOM_GAP, priority=False,
+                      bundle_size=BUNDLE_SIZE, cross_counter=False):
         """n geese and n orders. Cost = walking distance (goose -> counter -> room).
 
         bundle=True: 2n orders arrive, nearby same-counter orders are bundled, and
         the first n trips (first come, first served) are assigned to the n geese;
         later orders wait for the next round ("waiting" in the result).
+        bundle_size (up to 3) and cross_counter (orders from nearby counters may
+        share a trip) widen the bundling rule; with bundle_size k, k*n orders arrive.
 
         priority=True: cost = priority x walking distance, where each order (or
         trip) gets its own priority by arrival: the first gets n, the last gets 1.
@@ -134,7 +164,8 @@ class Campus:
         "distance".
         """
         rng = rng or random.Random()
-        scn = self._make_bundled(n, rng, max_room_gap) if bundle else self._make_plain(n, rng)
+        scn = (self._make_bundled(n, rng, max_room_gap, bundle_size, cross_counter) if bundle
+               else self._make_plain(n, rng))
         return add_priority(scn) if priority else scn
 
     def _make_plain(self, n, rng):
@@ -152,17 +183,16 @@ class Campus:
                 cost[b, o] = d[bot] + d[self.named[order["room"]]]
         return {"bots": bots, "orders": orders, "cost": cost.tolist()}
 
-    def _make_bundled(self, n, rng, max_room_gap):
+    def _make_bundled(self, n, rng, max_room_gap, bundle_size=BUNDLE_SIZE, cross_counter=False):
         bots = rng.sample(self.floor, n)
         arrivals = []
-        for _ in range(2 * n):
+        for _ in range(bundle_size * n):
             item = rng.choice(list(ITEMS))
             arrivals.append({"item": item, "counter": ITEMS[item]["counter"],
                              "room": rng.choice(self.rooms)})
-        trips = self.bundle_orders(arrivals, max_room_gap)
+        trips = self.bundle_orders(arrivals, max_room_gap, bundle_size, cross_counter)
+        trips.sort(key=lambda t: min(t["orders"]))  # first come, first served
         chosen, later = trips[:n], trips[n:]
-        for t in chosen:
-            t["items"] = [arrivals[i]["item"] for i in t["orders"]]
         cost = np.array([[self.trip_length(tuple(b), t) for t in chosen] for b in bots], dtype=float)
         return {"bots": bots, "orders": chosen, "cost": cost.tolist(), "arrivals": arrivals,
                 "waiting": sorted(i for t in later for i in t["orders"])}
